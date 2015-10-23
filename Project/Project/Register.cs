@@ -160,6 +160,11 @@ namespace Project
             }
             return doesExist;
         }
+
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+            doNotWrite = true;
+        }
     }
 
 

@@ -136,6 +136,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmRegister";
             this.Text = "User Registration";
+            this.Load += new System.EventHandler(this.frmRegister_Load);
             this.grpBxRegister.ResumeLayout(false);
             this.grpBxRegister.PerformLayout();
             this.ResumeLayout(false);
