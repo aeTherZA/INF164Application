@@ -28,185 +28,387 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lnklblMainLogout = new System.Windows.Forms.LinkLabel();
-            this.lblMainUser = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnChangeMail = new System.Windows.Forms.Button();
-            this.txtBxChangemail = new System.Windows.Forms.TextBox();
-            this.lblDatejoined = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.paneProfile = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panelEventView = new System.Windows.Forms.Panel();
+            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.grpBoxLastClass = new System.Windows.Forms.GroupBox();
+            this.lblLastTopic = new System.Windows.Forms.Label();
+            this.lblLastEnd = new System.Windows.Forms.Label();
+            this.lblLastStart = new System.Windows.Forms.Label();
+            this.lblLastLocation = new System.Windows.Forms.Label();
+            this.lblLastSubject = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.grpBoxFirstClass = new System.Windows.Forms.GroupBox();
+            this.lbl1stLesson = new System.Windows.Forms.Label();
+            this.lbl1stEnd = new System.Windows.Forms.Label();
+            this.lbl1stStart = new System.Windows.Forms.Label();
+            this.lbl1stLocation = new System.Windows.Forms.Label();
+            this.lbl1stSubject = new System.Windows.Forms.Label();
+            this.lnklblLogout = new System.Windows.Forms.LinkLabel();
+            this.panelMain.SuspendLayout();
+            this.panelEventView.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.grpBoxLastClass.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.grpBoxFirstClass.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // panelMain
             // 
-            this.groupBox1.Controls.Add(this.lnklblMainLogout);
-            this.groupBox1.Controls.Add(this.lblMainUser);
-            this.groupBox1.Location = new System.Drawing.Point(14, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(968, 47);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.panelMain.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelMain.Controls.Add(this.lnklblLogout);
+            this.panelMain.Controls.Add(this.button5);
+            this.panelMain.Controls.Add(this.button4);
+            this.panelMain.Controls.Add(this.button3);
+            this.panelMain.Controls.Add(this.button2);
+            this.panelMain.Controls.Add(this.lblLogin);
+            this.panelMain.Controls.Add(this.paneProfile);
+            this.panelMain.Controls.Add(this.button1);
+            this.panelMain.Controls.Add(this.panelEventView);
+            this.panelMain.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(996, 512);
+            this.panelMain.TabIndex = 2;
             // 
-            // lnklblMainLogout
+            // button5
             // 
-            this.lnklblMainLogout.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnklblMainLogout.AutoSize = true;
-            this.lnklblMainLogout.LinkColor = System.Drawing.Color.Black;
-            this.lnklblMainLogout.Location = new System.Drawing.Point(1177, 19);
-            this.lnklblMainLogout.Name = "lnklblMainLogout";
-            this.lnklblMainLogout.Size = new System.Drawing.Size(43, 15);
-            this.lnklblMainLogout.TabIndex = 1;
-            this.lnklblMainLogout.TabStop = true;
-            this.lnklblMainLogout.Text = "Logout";
-            this.lnklblMainLogout.Click += new System.EventHandler(this.lnklblMainLogout_Click);
+            this.button5.AutoSize = true;
+            this.button5.BackColor = System.Drawing.Color.Teal;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Location = new System.Drawing.Point(3, 414);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(132, 65);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // lblMainUser
+            // button4
             // 
-            this.lblMainUser.AutoSize = true;
-            this.lblMainUser.Location = new System.Drawing.Point(6, 19);
-            this.lblMainUser.Name = "lblMainUser";
-            this.lblMainUser.Size = new System.Drawing.Size(82, 15);
-            this.lblMainUser.TabIndex = 0;
-            this.lblMainUser.Text = "Welcome Test";
+            this.button4.AutoSize = true;
+            this.button4.BackColor = System.Drawing.Color.Teal;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Location = new System.Drawing.Point(3, 343);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(132, 65);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // groupBox2
+            // button3
             // 
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.lblName);
-            this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Location = new System.Drawing.Point(14, 95);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(304, 483);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
+            this.button3.AutoSize = true;
+            this.button3.BackColor = System.Drawing.Color.Teal;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Location = new System.Drawing.Point(3, 272);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(132, 65);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // groupBox4
+            // button2
             // 
-            this.groupBox4.Controls.Add(this.btnChangeMail);
-            this.groupBox4.Controls.Add(this.txtBxChangemail);
-            this.groupBox4.Controls.Add(this.lblDatejoined);
-            this.groupBox4.Controls.Add(this.lblEmail);
-            this.groupBox4.Location = new System.Drawing.Point(61, 227);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(180, 218);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
+            this.button2.AutoSize = true;
+            this.button2.BackColor = System.Drawing.Color.Teal;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(3, 201);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 65);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // btnChangeMail
+            // lblLogin
             // 
-            this.btnChangeMail.Location = new System.Drawing.Point(28, 157);
-            this.btnChangeMail.Name = "btnChangeMail";
-            this.btnChangeMail.Size = new System.Drawing.Size(123, 25);
-            this.btnChangeMail.TabIndex = 3;
-            this.btnChangeMail.Text = "Update E-mail";
-            this.btnChangeMail.UseVisualStyleBackColor = true;
-            this.btnChangeMail.Click += new System.EventHandler(this.btnChangeMail_Click);
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLogin.Location = new System.Drawing.Point(132, 11);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(171, 16);
+            this.lblLogin.TabIndex = 7;
+            this.lblLogin.Text = "Logged in as Peter Griffin";
             // 
-            // txtBxChangemail
+            // paneProfile
             // 
-            this.txtBxChangemail.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtBxChangemail.Location = new System.Drawing.Point(6, 105);
-            this.txtBxChangemail.Name = "txtBxChangemail";
-            this.txtBxChangemail.Size = new System.Drawing.Size(168, 23);
-            this.txtBxChangemail.TabIndex = 2;
-            this.txtBxChangemail.Text = "E-mail Address";
-            this.txtBxChangemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBxChangemail.Click += new System.EventHandler(this.txtBxChangemail_Click);
+            this.paneProfile.BackColor = System.Drawing.Color.FloralWhite;
+            this.paneProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.paneProfile.Location = new System.Drawing.Point(3, 3);
+            this.paneProfile.Name = "paneProfile";
+            this.paneProfile.Size = new System.Drawing.Size(126, 121);
+            this.paneProfile.TabIndex = 6;
             // 
-            // lblDatejoined
+            // button1
             // 
-            this.lblDatejoined.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDatejoined.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDatejoined.Location = new System.Drawing.Point(25, 52);
-            this.lblDatejoined.Name = "lblDatejoined";
-            this.lblDatejoined.Size = new System.Drawing.Size(126, 23);
-            this.lblDatejoined.TabIndex = 1;
-            this.lblDatejoined.Text = "Date Joined";
-            this.lblDatejoined.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(3, 130);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 65);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // lblEmail
+            // panelEventView
             // 
-            this.lblEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEmail.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEmail.Location = new System.Drawing.Point(3, 19);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(174, 196);
-            this.lblEmail.TabIndex = 0;
-            this.lblEmail.Text = "Email Address";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.panelEventView.BackColor = System.Drawing.Color.GhostWhite;
+            this.panelEventView.Controls.Add(this.monthCalendar);
+            this.panelEventView.Controls.Add(this.panel4);
+            this.panelEventView.Controls.Add(this.panel5);
+            this.panelEventView.Location = new System.Drawing.Point(135, 61);
+            this.panelEventView.Name = "panelEventView";
+            this.panelEventView.Size = new System.Drawing.Size(849, 434);
+            this.panelEventView.TabIndex = 0;
             // 
-            // lblName
+            // monthCalendar
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(117, 185);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(62, 15);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Username";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.monthCalendar.Location = new System.Drawing.Point(565, 129);
+            this.monthCalendar.Name = "monthCalendar";
+            this.monthCalendar.TabIndex = 3;
             // 
-            // pictureBox1
+            // panel4
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(61, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 146);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel4.BackColor = System.Drawing.Color.Maroon;
+            this.panel4.Controls.Add(this.grpBoxLastClass);
+            this.panel4.Location = new System.Drawing.Point(515, 303);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(321, 100);
+            this.panel4.TabIndex = 2;
             // 
-            // groupBox3
+            // grpBoxLastClass
             // 
-            this.groupBox3.Location = new System.Drawing.Point(356, 95);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(626, 483);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
+            this.grpBoxLastClass.BackColor = System.Drawing.Color.Transparent;
+            this.grpBoxLastClass.Controls.Add(this.lblLastTopic);
+            this.grpBoxLastClass.Controls.Add(this.lblLastEnd);
+            this.grpBoxLastClass.Controls.Add(this.lblLastStart);
+            this.grpBoxLastClass.Controls.Add(this.lblLastLocation);
+            this.grpBoxLastClass.Controls.Add(this.lblLastSubject);
+            this.grpBoxLastClass.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxLastClass.ForeColor = System.Drawing.Color.White;
+            this.grpBoxLastClass.Location = new System.Drawing.Point(4, 4);
+            this.grpBoxLastClass.Name = "grpBoxLastClass";
+            this.grpBoxLastClass.Size = new System.Drawing.Size(314, 93);
+            this.grpBoxLastClass.TabIndex = 0;
+            this.grpBoxLastClass.TabStop = false;
+            this.grpBoxLastClass.Text = "Your Last Class";
+            // 
+            // lblLastTopic
+            // 
+            this.lblLastTopic.AutoSize = true;
+            this.lblLastTopic.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastTopic.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLastTopic.Location = new System.Drawing.Point(128, 50);
+            this.lblLastTopic.Name = "lblLastTopic";
+            this.lblLastTopic.Size = new System.Drawing.Size(178, 16);
+            this.lblLastTopic.TabIndex = 16;
+            this.lblLastTopic.Text = "Lesson Topic : Memento Pattern";
+            // 
+            // lblLastEnd
+            // 
+            this.lblLastEnd.AutoSize = true;
+            this.lblLastEnd.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastEnd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLastEnd.Location = new System.Drawing.Point(206, 25);
+            this.lblLastEnd.Name = "lblLastEnd";
+            this.lblLastEnd.Size = new System.Drawing.Size(67, 16);
+            this.lblLastEnd.TabIndex = 16;
+            this.lblLastEnd.Text = "End : 09:00";
+            // 
+            // lblLastStart
+            // 
+            this.lblLastStart.AutoSize = true;
+            this.lblLastStart.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastStart.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLastStart.Location = new System.Drawing.Point(128, 25);
+            this.lblLastStart.Name = "lblLastStart";
+            this.lblLastStart.Size = new System.Drawing.Size(72, 16);
+            this.lblLastStart.TabIndex = 15;
+            this.lblLastStart.Text = "Start : 08:00";
+            // 
+            // lblLastLocation
+            // 
+            this.lblLastLocation.AutoSize = true;
+            this.lblLastLocation.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastLocation.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLastLocation.Location = new System.Drawing.Point(6, 50);
+            this.lblLastLocation.Name = "lblLastLocation";
+            this.lblLastLocation.Size = new System.Drawing.Size(116, 16);
+            this.lblLastLocation.TabIndex = 14;
+            this.lblLastLocation.Text = "Location : Roos Hall";
+            // 
+            // lblLastSubject
+            // 
+            this.lblLastSubject.AutoSize = true;
+            this.lblLastSubject.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastSubject.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLastSubject.Location = new System.Drawing.Point(6, 25);
+            this.lblLastSubject.Name = "lblLastSubject";
+            this.lblLastSubject.Size = new System.Drawing.Size(104, 16);
+            this.lblLastSubject.TabIndex = 13;
+            this.lblLastSubject.Text = "Subject : COS 121";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Maroon;
+            this.panel5.Controls.Add(this.grpBoxFirstClass);
+            this.panel5.Location = new System.Drawing.Point(515, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(321, 100);
+            this.panel5.TabIndex = 1;
+            // 
+            // grpBoxFirstClass
+            // 
+            this.grpBoxFirstClass.BackColor = System.Drawing.Color.Transparent;
+            this.grpBoxFirstClass.Controls.Add(this.lbl1stLesson);
+            this.grpBoxFirstClass.Controls.Add(this.lbl1stEnd);
+            this.grpBoxFirstClass.Controls.Add(this.lbl1stStart);
+            this.grpBoxFirstClass.Controls.Add(this.lbl1stLocation);
+            this.grpBoxFirstClass.Controls.Add(this.lbl1stSubject);
+            this.grpBoxFirstClass.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxFirstClass.ForeColor = System.Drawing.Color.White;
+            this.grpBoxFirstClass.Location = new System.Drawing.Point(4, 4);
+            this.grpBoxFirstClass.Name = "grpBoxFirstClass";
+            this.grpBoxFirstClass.Size = new System.Drawing.Size(314, 93);
+            this.grpBoxFirstClass.TabIndex = 0;
+            this.grpBoxFirstClass.TabStop = false;
+            this.grpBoxFirstClass.Text = "Your First Class";
+            // 
+            // lbl1stLesson
+            // 
+            this.lbl1stLesson.AutoSize = true;
+            this.lbl1stLesson.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1stLesson.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl1stLesson.Location = new System.Drawing.Point(128, 50);
+            this.lbl1stLesson.Name = "lbl1stLesson";
+            this.lbl1stLesson.Size = new System.Drawing.Size(178, 16);
+            this.lbl1stLesson.TabIndex = 16;
+            this.lbl1stLesson.Text = "Lesson Topic : Memento Pattern";
+            // 
+            // lbl1stEnd
+            // 
+            this.lbl1stEnd.AutoSize = true;
+            this.lbl1stEnd.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1stEnd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl1stEnd.Location = new System.Drawing.Point(206, 25);
+            this.lbl1stEnd.Name = "lbl1stEnd";
+            this.lbl1stEnd.Size = new System.Drawing.Size(67, 16);
+            this.lbl1stEnd.TabIndex = 16;
+            this.lbl1stEnd.Text = "End : 09:00";
+            // 
+            // lbl1stStart
+            // 
+            this.lbl1stStart.AutoSize = true;
+            this.lbl1stStart.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1stStart.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl1stStart.Location = new System.Drawing.Point(128, 25);
+            this.lbl1stStart.Name = "lbl1stStart";
+            this.lbl1stStart.Size = new System.Drawing.Size(72, 16);
+            this.lbl1stStart.TabIndex = 15;
+            this.lbl1stStart.Text = "Start : 08:00";
+            // 
+            // lbl1stLocation
+            // 
+            this.lbl1stLocation.AutoSize = true;
+            this.lbl1stLocation.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1stLocation.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl1stLocation.Location = new System.Drawing.Point(6, 50);
+            this.lbl1stLocation.Name = "lbl1stLocation";
+            this.lbl1stLocation.Size = new System.Drawing.Size(116, 16);
+            this.lbl1stLocation.TabIndex = 14;
+            this.lbl1stLocation.Text = "Location : Roos Hall";
+            // 
+            // lbl1stSubject
+            // 
+            this.lbl1stSubject.AutoSize = true;
+            this.lbl1stSubject.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1stSubject.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl1stSubject.Location = new System.Drawing.Point(6, 25);
+            this.lbl1stSubject.Name = "lbl1stSubject";
+            this.lbl1stSubject.Size = new System.Drawing.Size(104, 16);
+            this.lbl1stSubject.TabIndex = 13;
+            this.lbl1stSubject.Text = "Subject : COS 121";
+            // 
+            // lnklblLogout
+            // 
+            this.lnklblLogout.ActiveLinkColor = System.Drawing.Color.DarkGray;
+            this.lnklblLogout.AutoSize = true;
+            this.lnklblLogout.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lnklblLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnklblLogout.LinkColor = System.Drawing.Color.White;
+            this.lnklblLogout.Location = new System.Drawing.Point(893, 11);
+            this.lnklblLogout.Name = "lnklblLogout";
+            this.lnklblLogout.Size = new System.Drawing.Size(58, 16);
+            this.lnklblLogout.TabIndex = 12;
+            this.lnklblLogout.TabStop = true;
+            this.lnklblLogout.Text = "Log Out";
+            this.lnklblLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblLogout_LinkClicked);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 581);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(995, 513);
+            this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmMain";
             this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
+            this.panelEventView.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.grpBoxLastClass.ResumeLayout(false);
+            this.grpBoxLastClass.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.grpBoxFirstClass.ResumeLayout(false);
+            this.grpBoxFirstClass.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblMainUser;
-        private System.Windows.Forms.LinkLabel lnklblMainLogout;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnChangeMail;
-        private System.Windows.Forms.TextBox txtBxChangemail;
-        private System.Windows.Forms.Label lblDatejoined;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Panel paneProfile;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelEventView;
+        private System.Windows.Forms.MonthCalendar monthCalendar;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.GroupBox grpBoxLastClass;
+        private System.Windows.Forms.Label lblLastTopic;
+        private System.Windows.Forms.Label lblLastEnd;
+        private System.Windows.Forms.Label lblLastStart;
+        private System.Windows.Forms.Label lblLastLocation;
+        private System.Windows.Forms.Label lblLastSubject;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.GroupBox grpBoxFirstClass;
+        private System.Windows.Forms.Label lbl1stLesson;
+        private System.Windows.Forms.Label lbl1stEnd;
+        private System.Windows.Forms.Label lbl1stStart;
+        private System.Windows.Forms.Label lbl1stLocation;
+        private System.Windows.Forms.Label lbl1stSubject;
+        private System.Windows.Forms.LinkLabel lnklblLogout;
+
+
     }
 }

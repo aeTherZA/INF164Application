@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.lblInstructions = new System.Windows.Forms.Label();
             this.txtBxUser = new System.Windows.Forms.TextBox();
             this.txtBxPass = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
@@ -38,27 +36,12 @@
             this.lnklblSignUp = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.grpBxLogin.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(22, 24);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(250, 22);
-            this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome to <To be named>";
-            // 
-            // lblInstructions
-            // 
-            this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Location = new System.Drawing.Point(74, 65);
-            this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(147, 13);
-            this.lblInstructions.TabIndex = 1;
-            this.lblInstructions.Text = "Enter your login details below.";
             // 
             // txtBxUser
             // 
@@ -108,7 +91,7 @@
             this.grpBxLogin.Controls.Add(this.txtBxPass);
             this.grpBxLogin.Controls.Add(this.lblPass);
             this.grpBxLogin.Controls.Add(this.txtBxUser);
-            this.grpBxLogin.Location = new System.Drawing.Point(40, 81);
+            this.grpBxLogin.Location = new System.Drawing.Point(68, 106);
             this.grpBxLogin.Name = "grpBxLogin";
             this.grpBxLogin.Size = new System.Drawing.Size(220, 161);
             this.grpBxLogin.TabIndex = 6;
@@ -147,28 +130,58 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(1, -4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(364, 104);
+            this.panel1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(101, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(153, 43);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Welcome";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(63, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(228, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Please enter your login login details";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 274);
+            this.ClientSize = new System.Drawing.Size(364, 279);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.grpBxLogin);
-            this.Controls.Add(this.lblInstructions);
-            this.Controls.Add(this.lblWelcome);
             this.Name = "frmLogin";
             this.Text = "Log In Menu";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.grpBxLogin.ResumeLayout(false);
             this.grpBxLogin.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.TextBox txtBxUser;
         private System.Windows.Forms.TextBox txtBxPass;
         private System.Windows.Forms.Label lblUser;
@@ -177,6 +190,9 @@
         private System.Windows.Forms.LinkLabel lnklblSignUp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
