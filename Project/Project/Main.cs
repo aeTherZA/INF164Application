@@ -79,8 +79,6 @@ namespace Project
             DataChanged = true;
             MessageBox.Show("Email Updated Successfully!");
             lblEmail.Text = currentUser.Email;
-            txtBxChangemail.ForeColor = Color.Gray;
-            txtBxChangemail.Text = "Email Address";
         }
     }
 }

@@ -23,9 +23,9 @@ namespace Project
             //Open Data File.
             try
             {
-                StreamReader file = new StreamReader("data.txt");
+                StreamReader file = new StreamReader("data.ser");
 
-                if (new FileInfo("data.txt").Length == 0)
+                if (new FileInfo("data.ser").Length == 0)
                 {
                     btnLogin.Enabled = false;
                     MessageBox.Show("Please proceed to creating an account, no data present.");
@@ -42,10 +42,10 @@ namespace Project
             }
             catch (FileNotFoundException)
             {
-                MessageBox.Show("File Not Found");
+                MessageBox.Show("File Not Found" + "\nCreating New Data Source");
+                File.Create("data.ser").Dispose();
                 txtBxUser.Text = "Unavailable";
                 btnLogin.Enabled = false;
-                lnklblSignUp.Enabled = false;
                 txtBxPass.Enabled = false;
                 txtBxUser.Enabled = false;
 
@@ -90,16 +90,20 @@ namespace Project
             {
                 //WriteToFile
                 WriteToFile(ref userDB);
+                btnLogin.Enabled = true;
+                txtBxUser.Text = "";
+                txtBxPass.Enabled = true;
+                txtBxUser.Enabled = true;
             }
             
         }
 
         private void WriteToFile(ref List<Users> users) //For initialisation only.
         {
-            StreamWriter write = new StreamWriter("data.txt");
+            StreamWriter write = new StreamWriter("data.ser");
             String dataStream;
 
-            if (new FileInfo("data.txt").Length == 0)
+            if (new FileInfo("data.ser").Length == 0)
             {
                 for (int i = 0; i < users.Count; i++)
                 {
@@ -204,8 +208,6 @@ namespace Project
                         main.retrieveNew(ref userDB,index);
                         writeLine(ref userDB);
                     }
-                    txtBxPass.Text = "";
-                    txtBxUser.Text = "";
                 }
 
                 
@@ -230,10 +232,10 @@ namespace Project
 
         private void writeLine(ref List<Users> data) //For updating of data only
         {
-            StreamWriter write = new StreamWriter("data.txt");
+            StreamWriter write = new StreamWriter("data.ser");
             String dataStream;
 
-            if (new FileInfo("data.txt").Length == 0)
+            if (new FileInfo("data.ser").Length == 0)
             {
                 for (int i = 0; i < data.Count; i++)
                 {
