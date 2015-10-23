@@ -163,7 +163,7 @@ namespace Project
 
         private void frmRegister_Load(object sender, EventArgs e)
         {
-            doNotWrite = true;
+            
         }
     }
 

@@ -42,6 +42,8 @@ namespace Project
             lblEmail.Text = currentUser.Email;
             lblName.Text = currentUser.Username;
             lblDatejoined.Text = Convert.ToString(currentUser.SignupDate);
+            
+            
         }
 
         private void lnklblMainLogout_Click(object sender, EventArgs e)

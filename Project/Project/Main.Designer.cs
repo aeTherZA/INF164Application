@@ -32,18 +32,18 @@
             this.lnklblMainLogout = new System.Windows.Forms.LinkLabel();
             this.lblMainUser = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblName = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblDatejoined = new System.Windows.Forms.Label();
-            this.txtBxChangemail = new System.Windows.Forms.TextBox();
             this.btnChangeMail = new System.Windows.Forms.Button();
+            this.txtBxChangemail = new System.Windows.Forms.TextBox();
+            this.lblDatejoined = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -52,7 +52,7 @@
             this.groupBox1.Controls.Add(this.lblMainUser);
             this.groupBox1.Location = new System.Drawing.Point(14, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1226, 47);
+            this.groupBox1.Size = new System.Drawing.Size(968, 47);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -89,32 +89,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(356, 95);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(626, 483);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(61, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 146);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(117, 185);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(62, 15);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Username";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnChangeMail);
@@ -126,6 +100,38 @@
             this.groupBox4.Size = new System.Drawing.Size(180, 218);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
+            // 
+            // btnChangeMail
+            // 
+            this.btnChangeMail.Location = new System.Drawing.Point(28, 157);
+            this.btnChangeMail.Name = "btnChangeMail";
+            this.btnChangeMail.Size = new System.Drawing.Size(123, 25);
+            this.btnChangeMail.TabIndex = 3;
+            this.btnChangeMail.Text = "Update E-mail";
+            this.btnChangeMail.UseVisualStyleBackColor = true;
+            this.btnChangeMail.Click += new System.EventHandler(this.btnChangeMail_Click);
+            // 
+            // txtBxChangemail
+            // 
+            this.txtBxChangemail.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtBxChangemail.Location = new System.Drawing.Point(6, 105);
+            this.txtBxChangemail.Name = "txtBxChangemail";
+            this.txtBxChangemail.Size = new System.Drawing.Size(168, 23);
+            this.txtBxChangemail.TabIndex = 2;
+            this.txtBxChangemail.Text = "E-mail Address";
+            this.txtBxChangemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBxChangemail.Click += new System.EventHandler(this.txtBxChangemail_Click);
+            // 
+            // lblDatejoined
+            // 
+            this.lblDatejoined.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDatejoined.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDatejoined.Location = new System.Drawing.Point(25, 52);
+            this.lblDatejoined.Name = "lblDatejoined";
+            this.lblDatejoined.Size = new System.Drawing.Size(126, 23);
+            this.lblDatejoined.TabIndex = 1;
+            this.lblDatejoined.Text = "Date Joined";
+            this.lblDatejoined.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEmail
             // 
@@ -139,43 +145,37 @@
             this.lblEmail.Text = "Email Address";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblDatejoined
+            // lblName
             // 
-            this.lblDatejoined.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDatejoined.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDatejoined.Location = new System.Drawing.Point(25, 52);
-            this.lblDatejoined.Name = "lblDatejoined";
-            this.lblDatejoined.Size = new System.Drawing.Size(126, 23);
-            this.lblDatejoined.TabIndex = 1;
-            this.lblDatejoined.Text = "Date Joined";
-            this.lblDatejoined.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(117, 185);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(62, 15);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Username";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtBxChangemail
+            // pictureBox1
             // 
-            this.txtBxChangemail.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtBxChangemail.Location = new System.Drawing.Point(6, 105);
-            this.txtBxChangemail.Name = "txtBxChangemail";
-            this.txtBxChangemail.Size = new System.Drawing.Size(168, 23);
-            this.txtBxChangemail.TabIndex = 2;
-            this.txtBxChangemail.Text = "E-mail Address";
-            this.txtBxChangemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBxChangemail.Click += new System.EventHandler(this.txtBxChangemail_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(180, 146);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnChangeMail
+            // groupBox3
             // 
-            this.btnChangeMail.Location = new System.Drawing.Point(28, 157);
-            this.btnChangeMail.Name = "btnChangeMail";
-            this.btnChangeMail.Size = new System.Drawing.Size(123, 25);
-            this.btnChangeMail.TabIndex = 3;
-            this.btnChangeMail.Text = "Update E-mail";
-            this.btnChangeMail.UseVisualStyleBackColor = true;
-            this.btnChangeMail.Click += new System.EventHandler(this.btnChangeMail_Click);
+            this.groupBox3.Location = new System.Drawing.Point(356, 95);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(626, 483);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 581);
+            this.ClientSize = new System.Drawing.Size(1001, 581);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -187,9 +187,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
