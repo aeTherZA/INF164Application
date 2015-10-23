@@ -37,11 +37,8 @@ namespace Project
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-           
-            lblMainUser.Text = "Welcome " + currentUser.Username;
-            lblEmail.Text = currentUser.Email;
-            lblName.Text = currentUser.Username;
-            lblDatejoined.Text = Convert.ToString(currentUser.SignupDate);
+            lblLogin.Text = "Welcome " + currentUser.Username;
+            
         }
 
         private void lnklblMainLogout_Click(object sender, EventArgs e)
@@ -51,8 +48,7 @@ namespace Project
 
         private void txtBxChangemail_Click(object sender, EventArgs e)
         {
-            txtBxChangemail.Text = "";
-            txtBxChangemail.ForeColor = Color.Black;
+            
         }
 
         public void retrieveNew(ref List<Users> toModify,int pos)
@@ -75,10 +71,13 @@ namespace Project
 
         private void btnChangeMail_Click(object sender, EventArgs e)
         {
-            currentUser.Email = txtBxChangemail.Text;
-            DataChanged = true;
-            MessageBox.Show("Email Updated Successfully!");
-            lblEmail.Text = currentUser.Email;
+            
+        }
+
+        private void lnklblLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("You have logged out");
+            this.Close();
         }
     }
 }

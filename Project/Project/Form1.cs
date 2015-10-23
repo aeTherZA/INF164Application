@@ -208,6 +208,8 @@ namespace Project
                         main.retrieveNew(ref userDB,index);
                         writeLine(ref userDB);
                     }
+                    txtBxPass.Text = "";
+                    txtBxUser.Text = "";
                 }
 
                 
