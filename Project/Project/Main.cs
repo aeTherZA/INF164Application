@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// HEY :) I see the work of the last file i put on drive st
+
+
 namespace Project
 {
     public partial class frmMain : Form
@@ -38,14 +41,16 @@ namespace Project
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            lblLogin.Text = "Welcome " + currentUser.Username;
+            lblLogin.Text = "Logged in as " + currentUser.Username;
             CalendarData userevent = new CalendarData();
             userevent.setUser(currentUser.Username);
             userevent.setEvent(DateTime.Today);
             userevent.TimeSlot1 = "COS110";
             userevent.TimeSlot2 = "COS121";
             myCalendar.Add(userevent);
- 
+
+            panelEventView.Show();
+            pnl2.Hide();
           
             
         }
@@ -142,6 +147,87 @@ namespace Project
             frmAddEvent newEvent = new frmAddEvent();
             newEvent.passData(ref myCalendar,ref currentUser);
             newEvent.ShowDialog();
+        }
+
+        private void lbl1stSubject_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateUserData_Click(object sender, EventArgs e)
+        {
+            panelEventView.Hide();
+            pnl2.Show();
+            lblCName.Text = currentUser.Username;
+            lblCPassword.Text = currentUser.Password;
+            lblCEmail.Text = currentUser.Email;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string newUer, newPass, newEmail;
+            bool allFieldCorrect = true;
+
+            if (tbUserName.Text == "")
+            {
+                newUer = currentUser.Username;
+            }
+            else
+            {
+                newUer = tbUserName.Text;
+            }
+
+            if (tbPassw.Text == "")
+            {
+                newPass = currentUser.Password;
+            }
+            else
+            {
+                newPass = tbPassw.Text;
+            }
+
+            if (tbEmailAddress.Text == "")
+            {
+                newEmail = currentUser.Email;
+            }
+            else
+            {
+                newEmail = tbEmailAddress.Text;
+            }
+
+            if (newUer != tbValidateUsername.Text)
+            {
+                allFieldCorrect = false;
+                MessageBox.Show("ERROR : The username fields do not match.");
+            }
+
+            if (newPass != tbValidatePassw.Text)
+            {
+                allFieldCorrect = false;
+                MessageBox.Show("ERROR : The password fields do not match.");
+            }
+
+            if (allFieldCorrect)
+            {
+                //Update the data
+            }
+          
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnViewProfile_Click(object sender, EventArgs e)
+        {
+            panelEventView.Show();
+            pnl2.Hide();
         }
     }
 }
