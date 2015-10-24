@@ -29,14 +29,39 @@
         private void InitializeComponent()
         {
             this.panelMain = new System.Windows.Forms.Panel();
+            this.lnklblLogout = new System.Windows.Forms.LinkLabel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAddEvent = new System.Windows.Forms.Button();
             this.lblLogin = new System.Windows.Forms.Label();
             this.paneProfile = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnViewProfile = new System.Windows.Forms.Button();
             this.panelEventView = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.time11 = new System.Windows.Forms.TextBox();
+            this.time10 = new System.Windows.Forms.TextBox();
+            this.time9 = new System.Windows.Forms.TextBox();
+            this.time8 = new System.Windows.Forms.TextBox();
+            this.time7 = new System.Windows.Forms.TextBox();
+            this.time6 = new System.Windows.Forms.TextBox();
+            this.time5 = new System.Windows.Forms.TextBox();
+            this.time4 = new System.Windows.Forms.TextBox();
+            this.time3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.time2 = new System.Windows.Forms.TextBox();
+            this.time1 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.panel4 = new System.Windows.Forms.Panel();
             this.grpBoxLastClass = new System.Windows.Forms.GroupBox();
@@ -52,9 +77,10 @@
             this.lbl1stStart = new System.Windows.Forms.Label();
             this.lbl1stLocation = new System.Windows.Forms.Label();
             this.lbl1stSubject = new System.Windows.Forms.Label();
-            this.lnklblLogout = new System.Windows.Forms.LinkLabel();
             this.panelMain.SuspendLayout();
             this.panelEventView.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.grpBoxLastClass.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -68,16 +94,31 @@
             this.panelMain.Controls.Add(this.button5);
             this.panelMain.Controls.Add(this.button4);
             this.panelMain.Controls.Add(this.button3);
-            this.panelMain.Controls.Add(this.button2);
+            this.panelMain.Controls.Add(this.btnAddEvent);
             this.panelMain.Controls.Add(this.lblLogin);
             this.panelMain.Controls.Add(this.paneProfile);
-            this.panelMain.Controls.Add(this.button1);
+            this.panelMain.Controls.Add(this.btnViewProfile);
             this.panelMain.Controls.Add(this.panelEventView);
             this.panelMain.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(996, 512);
+            this.panelMain.Size = new System.Drawing.Size(1008, 565);
             this.panelMain.TabIndex = 2;
+            // 
+            // lnklblLogout
+            // 
+            this.lnklblLogout.ActiveLinkColor = System.Drawing.Color.DarkGray;
+            this.lnklblLogout.AutoSize = true;
+            this.lnklblLogout.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lnklblLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnklblLogout.LinkColor = System.Drawing.Color.White;
+            this.lnklblLogout.Location = new System.Drawing.Point(893, 11);
+            this.lnklblLogout.Name = "lnklblLogout";
+            this.lnklblLogout.Size = new System.Drawing.Size(58, 16);
+            this.lnklblLogout.TabIndex = 12;
+            this.lnklblLogout.TabStop = true;
+            this.lnklblLogout.Text = "Log Out";
+            this.lnklblLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblLogout_LinkClicked);
             // 
             // button5
             // 
@@ -118,18 +159,20 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnAddEvent
             // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(3, 201);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 65);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddEvent.AutoSize = true;
+            this.btnAddEvent.BackColor = System.Drawing.Color.Teal;
+            this.btnAddEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAddEvent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddEvent.ForeColor = System.Drawing.Color.MintCream;
+            this.btnAddEvent.Location = new System.Drawing.Point(3, 201);
+            this.btnAddEvent.Name = "btnAddEvent";
+            this.btnAddEvent.Size = new System.Drawing.Size(132, 65);
+            this.btnAddEvent.TabIndex = 8;
+            this.btnAddEvent.Text = "Add Event";
+            this.btnAddEvent.UseVisualStyleBackColor = false;
+            this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
             // 
             // lblLogin
             // 
@@ -151,35 +194,357 @@
             this.paneProfile.Size = new System.Drawing.Size(126, 121);
             this.paneProfile.TabIndex = 6;
             // 
-            // button1
+            // btnViewProfile
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(3, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 65);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnViewProfile.AutoSize = true;
+            this.btnViewProfile.BackColor = System.Drawing.Color.Teal;
+            this.btnViewProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnViewProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnViewProfile.ForeColor = System.Drawing.Color.MintCream;
+            this.btnViewProfile.Location = new System.Drawing.Point(3, 130);
+            this.btnViewProfile.Name = "btnViewProfile";
+            this.btnViewProfile.Size = new System.Drawing.Size(132, 65);
+            this.btnViewProfile.TabIndex = 1;
+            this.btnViewProfile.Text = "View Profile";
+            this.btnViewProfile.UseVisualStyleBackColor = false;
             // 
             // panelEventView
             // 
             this.panelEventView.BackColor = System.Drawing.Color.GhostWhite;
+            this.panelEventView.Controls.Add(this.groupBox1);
             this.panelEventView.Controls.Add(this.monthCalendar);
             this.panelEventView.Controls.Add(this.panel4);
             this.panelEventView.Controls.Add(this.panel5);
             this.panelEventView.Location = new System.Drawing.Point(135, 61);
             this.panelEventView.Name = "panelEventView";
-            this.panelEventView.Size = new System.Drawing.Size(849, 434);
+            this.panelEventView.Size = new System.Drawing.Size(860, 493);
             this.panelEventView.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(56, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(371, 487);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox11);
+            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.time11);
+            this.groupBox2.Controls.Add(this.time10);
+            this.groupBox2.Controls.Add(this.time9);
+            this.groupBox2.Controls.Add(this.time8);
+            this.groupBox2.Controls.Add(this.time7);
+            this.groupBox2.Controls.Add(this.time6);
+            this.groupBox2.Controls.Add(this.time5);
+            this.groupBox2.Controls.Add(this.time4);
+            this.groupBox2.Controls.Add(this.time3);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.time2);
+            this.groupBox2.Controls.Add(this.time1);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Location = new System.Drawing.Point(29, 17);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(312, 456);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.MintCream;
+            this.textBox11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox11.ForeColor = System.Drawing.Color.Teal;
+            this.textBox11.Location = new System.Drawing.Point(126, 403);
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(165, 32);
+            this.textBox11.TabIndex = 21;
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.MintCream;
+            this.textBox10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox10.ForeColor = System.Drawing.Color.Teal;
+            this.textBox10.Location = new System.Drawing.Point(126, 365);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(165, 32);
+            this.textBox10.TabIndex = 20;
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.MintCream;
+            this.textBox9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox9.ForeColor = System.Drawing.Color.Teal;
+            this.textBox9.Location = new System.Drawing.Point(126, 328);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(165, 32);
+            this.textBox9.TabIndex = 19;
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.MintCream;
+            this.textBox8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox8.ForeColor = System.Drawing.Color.Teal;
+            this.textBox8.Location = new System.Drawing.Point(126, 290);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(165, 32);
+            this.textBox8.TabIndex = 18;
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.MintCream;
+            this.textBox7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox7.ForeColor = System.Drawing.Color.Teal;
+            this.textBox7.Location = new System.Drawing.Point(126, 252);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(165, 32);
+            this.textBox7.TabIndex = 17;
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.MintCream;
+            this.textBox6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox6.ForeColor = System.Drawing.Color.Teal;
+            this.textBox6.Location = new System.Drawing.Point(126, 214);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(165, 32);
+            this.textBox6.TabIndex = 16;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.MintCream;
+            this.textBox5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox5.ForeColor = System.Drawing.Color.Teal;
+            this.textBox5.Location = new System.Drawing.Point(126, 176);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(165, 32);
+            this.textBox5.TabIndex = 15;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.MintCream;
+            this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox4.ForeColor = System.Drawing.Color.Teal;
+            this.textBox4.Location = new System.Drawing.Point(126, 138);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(165, 32);
+            this.textBox4.TabIndex = 14;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.MintCream;
+            this.textBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox3.ForeColor = System.Drawing.Color.Teal;
+            this.textBox3.Location = new System.Drawing.Point(126, 100);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(165, 32);
+            this.textBox3.TabIndex = 13;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time11
+            // 
+            this.time11.BackColor = System.Drawing.Color.MintCream;
+            this.time11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time11.ForeColor = System.Drawing.Color.Teal;
+            this.time11.Location = new System.Drawing.Point(20, 403);
+            this.time11.Multiline = true;
+            this.time11.Name = "time11";
+            this.time11.Size = new System.Drawing.Size(108, 32);
+            this.time11.TabIndex = 12;
+            this.time11.Text = "17:30-18:30";
+            this.time11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time10
+            // 
+            this.time10.BackColor = System.Drawing.Color.MintCream;
+            this.time10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time10.ForeColor = System.Drawing.Color.Teal;
+            this.time10.Location = new System.Drawing.Point(20, 365);
+            this.time10.Multiline = true;
+            this.time10.Name = "time10";
+            this.time10.Size = new System.Drawing.Size(108, 32);
+            this.time10.TabIndex = 11;
+            this.time10.Text = "16:30-17:30";
+            this.time10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time9
+            // 
+            this.time9.BackColor = System.Drawing.Color.MintCream;
+            this.time9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time9.ForeColor = System.Drawing.Color.Teal;
+            this.time9.Location = new System.Drawing.Point(20, 328);
+            this.time9.Multiline = true;
+            this.time9.Name = "time9";
+            this.time9.Size = new System.Drawing.Size(108, 32);
+            this.time9.TabIndex = 10;
+            this.time9.Text = "15:30-16:30";
+            this.time9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time8
+            // 
+            this.time8.BackColor = System.Drawing.Color.MintCream;
+            this.time8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time8.ForeColor = System.Drawing.Color.Teal;
+            this.time8.Location = new System.Drawing.Point(20, 290);
+            this.time8.Multiline = true;
+            this.time8.Name = "time8";
+            this.time8.Size = new System.Drawing.Size(108, 32);
+            this.time8.TabIndex = 9;
+            this.time8.Text = "14:30-15:30";
+            this.time8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time7
+            // 
+            this.time7.BackColor = System.Drawing.Color.MintCream;
+            this.time7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time7.ForeColor = System.Drawing.Color.Teal;
+            this.time7.Location = new System.Drawing.Point(20, 252);
+            this.time7.Multiline = true;
+            this.time7.Name = "time7";
+            this.time7.Size = new System.Drawing.Size(108, 32);
+            this.time7.TabIndex = 8;
+            this.time7.Text = "13:30-14:30";
+            this.time7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time6
+            // 
+            this.time6.BackColor = System.Drawing.Color.MintCream;
+            this.time6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time6.ForeColor = System.Drawing.Color.Teal;
+            this.time6.Location = new System.Drawing.Point(20, 214);
+            this.time6.Multiline = true;
+            this.time6.Name = "time6";
+            this.time6.Size = new System.Drawing.Size(108, 32);
+            this.time6.TabIndex = 7;
+            this.time6.Text = "12:30-13:30";
+            this.time6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time5
+            // 
+            this.time5.BackColor = System.Drawing.Color.MintCream;
+            this.time5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time5.ForeColor = System.Drawing.Color.Teal;
+            this.time5.Location = new System.Drawing.Point(20, 176);
+            this.time5.Multiline = true;
+            this.time5.Name = "time5";
+            this.time5.Size = new System.Drawing.Size(108, 32);
+            this.time5.TabIndex = 6;
+            this.time5.Text = "11:30-12:30";
+            this.time5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time4
+            // 
+            this.time4.BackColor = System.Drawing.Color.MintCream;
+            this.time4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time4.ForeColor = System.Drawing.Color.Teal;
+            this.time4.Location = new System.Drawing.Point(20, 138);
+            this.time4.Multiline = true;
+            this.time4.Name = "time4";
+            this.time4.Size = new System.Drawing.Size(108, 32);
+            this.time4.TabIndex = 5;
+            this.time4.Text = "10:30-11:30";
+            this.time4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time3
+            // 
+            this.time3.BackColor = System.Drawing.Color.MintCream;
+            this.time3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time3.ForeColor = System.Drawing.Color.Teal;
+            this.time3.Location = new System.Drawing.Point(20, 100);
+            this.time3.Multiline = true;
+            this.time3.Name = "time3";
+            this.time3.Size = new System.Drawing.Size(108, 32);
+            this.time3.TabIndex = 4;
+            this.time3.Text = "09:30-10:30";
+            this.time3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.MintCream;
+            this.textBox2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox2.ForeColor = System.Drawing.Color.Teal;
+            this.textBox2.Location = new System.Drawing.Point(126, 62);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(165, 32);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time2
+            // 
+            this.time2.BackColor = System.Drawing.Color.MintCream;
+            this.time2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.time2.ForeColor = System.Drawing.Color.Teal;
+            this.time2.Location = new System.Drawing.Point(20, 62);
+            this.time2.Multiline = true;
+            this.time2.Name = "time2";
+            this.time2.Size = new System.Drawing.Size(108, 32);
+            this.time2.TabIndex = 2;
+            this.time2.Text = "08:30-09:30";
+            this.time2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time1
+            // 
+            this.time1.BackColor = System.Drawing.Color.MintCream;
+            this.time1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time1.ForeColor = System.Drawing.Color.Teal;
+            this.time1.Location = new System.Drawing.Point(20, 22);
+            this.time1.Multiline = true;
+            this.time1.Name = "time1";
+            this.time1.Size = new System.Drawing.Size(108, 34);
+            this.time1.TabIndex = 1;
+            this.time1.Text = "07:30-08:30";
+            this.time1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.MintCream;
+            this.textBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox1.ForeColor = System.Drawing.Color.Teal;
+            this.textBox1.Location = new System.Drawing.Point(126, 22);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(165, 34);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // monthCalendar
             // 
             this.monthCalendar.Location = new System.Drawing.Point(565, 129);
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 3;
+            this.monthCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateSelected);
             // 
             // panel4
             // 
@@ -343,26 +708,11 @@
             this.lbl1stSubject.TabIndex = 13;
             this.lbl1stSubject.Text = "Subject : COS 121";
             // 
-            // lnklblLogout
-            // 
-            this.lnklblLogout.ActiveLinkColor = System.Drawing.Color.DarkGray;
-            this.lnklblLogout.AutoSize = true;
-            this.lnklblLogout.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lnklblLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnklblLogout.LinkColor = System.Drawing.Color.White;
-            this.lnklblLogout.Location = new System.Drawing.Point(893, 11);
-            this.lnklblLogout.Name = "lnklblLogout";
-            this.lnklblLogout.Size = new System.Drawing.Size(58, 16);
-            this.lnklblLogout.TabIndex = 12;
-            this.lnklblLogout.TabStop = true;
-            this.lnklblLogout.Text = "Log Out";
-            this.lnklblLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblLogout_LinkClicked);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 513);
+            this.ClientSize = new System.Drawing.Size(1007, 566);
             this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmMain";
@@ -371,6 +721,9 @@
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.panelEventView.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.grpBoxLastClass.ResumeLayout(false);
             this.grpBoxLastClass.PerformLayout();
@@ -387,10 +740,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAddEvent;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Panel paneProfile;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnViewProfile;
         private System.Windows.Forms.Panel panelEventView;
         private System.Windows.Forms.MonthCalendar monthCalendar;
         private System.Windows.Forms.Panel panel4;
@@ -408,6 +761,30 @@
         private System.Windows.Forms.Label lbl1stLocation;
         private System.Windows.Forms.Label lbl1stSubject;
         private System.Windows.Forms.LinkLabel lnklblLogout;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox time11;
+        private System.Windows.Forms.TextBox time10;
+        private System.Windows.Forms.TextBox time9;
+        private System.Windows.Forms.TextBox time8;
+        private System.Windows.Forms.TextBox time7;
+        private System.Windows.Forms.TextBox time6;
+        private System.Windows.Forms.TextBox time5;
+        private System.Windows.Forms.TextBox time4;
+        private System.Windows.Forms.TextBox time3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox time2;
+        private System.Windows.Forms.TextBox time1;
 
 
     }
