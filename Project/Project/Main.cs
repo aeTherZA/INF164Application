@@ -49,6 +49,21 @@ namespace Project
             userevent.TimeSlot2 = "COS121";
             myCalendar.Add(userevent);
 
+            lbl1stSubject.Text = "Subject : ";
+            lbl1stLocation.Text = "Location : ";
+            lbl1stStart.Text = "Start : ";
+            lbl1stEnd.Text = "End : ";
+            lbl1stLesson.Text = "Topic : ";
+
+            lblLastSubject.Text = "Subject : ";
+            lblLastLocation.Text = "Location : ";
+            lblLastStart.Text = "Start : ";
+            lblLastEnd.Text = "End : ";
+            lblLastTopic.Text = "Topic : ";
+
+
+
+
             panelEventView.Show();
             pnl2.Hide();
           
@@ -228,6 +243,11 @@ namespace Project
         {
             panelEventView.Show();
             pnl2.Hide();
+        }
+
+        private void lblLastLocation_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
