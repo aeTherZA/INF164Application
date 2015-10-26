@@ -15,21 +15,6 @@ namespace Project
         CalendarDataList sudoData = new CalendarDataList();
         Users currentUser;
         List<string> timeslots = new List<string>();
-        private void initializeTimeSlot()
-        {
-            timeslots.Add("07:30-08:30");
-            timeslots.Add("08:30-09:30");
-            timeslots.Add("09:30-10:30");
-            timeslots.Add("10:30-11:30");
-            timeslots.Add("11:30-12:30");
-            timeslots.Add("12:30-13:30");
-            timeslots.Add("13:30-14:30");
-            timeslots.Add("14:30-15:30");
-            timeslots.Add("15:30-16:30");
-            timeslots.Add("16:30-17:30");
-            timeslots.Add("17:30-18:30");
-            dropDownEvents.DataSource = timeslots;
-        }
         public frmAddEvent()
         {
             InitializeComponent();
@@ -45,40 +30,139 @@ namespace Project
             sudoData = obj;
             currentUser = user;
         }
-
+        private void initializeTimeslots()
+        {
+            
+        }
         private void frmAddEvent_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < sudoData.Count();i++ )
-            {
-                if (sudoData[i].getUser() == currentUser.Username)
-                {
-                    if (monthCalendarAddEvent.SelectionStart == sudoData[i].getEvent())
-                    {
-                        setTime(sudoData[i]);
-                        
-                        break;
-                     
-                    }
-                }
-            }
             
-                
         }
 
-        private void setTime(CalendarData user)
+     
+
+        private void monthCalendarAddEvent_DateSelected(object sender, DateRangeEventArgs e)
         {
-        
-            /*timeslots[1] += user.TimeSlot1;
-            timeslots[2] += user.TimeSlot2;
-            timeslots[3] += user.TimeSlot3;
-            timeslots[4] += user.TimeSlot4;
-            timeslots[5] += user.TimeSlot5;
-            timeslots[6] += user.TimeSlot6;
-            timeslots[7] += user.TimeSlot7;
-            timeslots[8] += user.TimeSlot8;
-            timeslots[9] += user.TimeSlot9;
-            timeslots[10] += user.TimeSlot10;
-            timeslots[11] += user.TimeSlot11;*/
+            bool inDataBase = false;
+            bool hasBeenDone = false;
+            lblCurrentDate.Text = "Currently Selected: " + monthCalendarAddEvent.SelectionStart.ToString("D");
+            for(int i = 0; i < sudoData.Count();i++)
+            {
+                if(sudoData[i].getUser() == currentUser.Username)
+                {
+                    if(sudoData[i].getEvent() == monthCalendarAddEvent.SelectionStart)
+                    {
+                        inDataBase = true;
+                        
+                        if(sudoData[i].TimeSlot1 == "")
+                        {
+                            dropDownEvents.Items[0] += " - Available";
+                        }
+                        else
+                        {
+                            dropDownEvents.Items[0] += " -" + sudoData[i].TimeSlot1;
+                        }
+                        if (sudoData[i].TimeSlot2 == "")
+                        {
+                            dropDownEvents.Items[1] += " - Available";
+                        }
+                        else
+                        {
+                            dropDownEvents.Items[1] += " -" + sudoData[i].TimeSlot2;
+                        }
+                        if (sudoData[i].TimeSlot3 == "")
+                        {
+                            timeslots[2] += " - Available";
+                        }
+                        else
+                        {
+                            timeslots[2] += " -" + sudoData[i].TimeSlot3;
+                        }
+                        if (sudoData[i].TimeSlot4 == "")
+                        {
+                            timeslots[3] += " - Available";
+                        }
+                        else
+                        {
+                            timeslots[3] += " -" + sudoData[i].TimeSlot4;
+                        }
+                        if (sudoData[i].TimeSlot5 == "")
+                        {
+                            timeslots[4] += " - Available";
+                        }
+                        else
+                        {
+                            timeslots[4] += " -" + sudoData[i].TimeSlot5;
+                        }
+                        if (sudoData[i].TimeSlot6 == "")
+                        {
+                            timeslots[5] += " - Available";
+                        }
+                        else
+                        {
+                            timeslots[5] += " -" + sudoData[i].TimeSlot6;
+                        }
+                        if (sudoData[i].TimeSlot7 == "")
+                        {
+                            timeslots[6] += " - Available";
+                        }
+                        else
+                        {
+                            timeslots[6] += " -" + sudoData[i].TimeSlot7;
+                        }
+                        if (sudoData[i].TimeSlot8 == "")
+                        {
+                            timeslots[7] += " - Available";
+                        }
+                        else
+                        {
+                            timeslots[7] += " -" + sudoData[i].TimeSlot8;
+                        }
+                        if (sudoData[i].TimeSlot9 == "")
+                        {
+                            timeslots[8] += " - Available";
+                        }
+                        else
+                        {
+                            timeslots[8] += " -" + sudoData[i].TimeSlot9;
+                        }
+                        if (sudoData[i].TimeSlot10 == "")
+                        {
+                            timeslots[9] += " - Available";
+                        }
+                        else
+                        {
+                            timeslots[9] += " -" + sudoData[i].TimeSlot10;
+                        }
+                        if (sudoData[i].TimeSlot11 == "")
+                        {
+                            timeslots[10] += " - Available";
+                        }
+                        else
+                        {
+                            timeslots[10] += " -" + sudoData[i].TimeSlot11;
+                        }
+                 }
+                }
+            }
+                    if(inDataBase == false)
+                    {
+                        if (hasBeenDone == false)
+                        {
+                            for (int y = 0; y < 11; y++)
+                            {
+
+                                dropDownEvents.Items[y] += " - Available";
+                                dropDownEvents.Refresh();
+                            }
+                            hasBeenDone = true;
+                        }
+                       
+                        
+                    }
+
+                    
+                    
+                }
+            }
         }
-    }
-}

@@ -42,13 +42,7 @@ namespace Project
         private void frmMain_Load(object sender, EventArgs e)
         {
             lblLogin.Text = "Logged in as " + currentUser.Username;
-            CalendarData userevent = new CalendarData();
-            userevent.setUser(currentUser.Username);
-            userevent.setEvent(DateTime.Today);
-            userevent.TimeSlot1 = "COS110";
-            userevent.TimeSlot2 = "COS121";
-            myCalendar.Add(userevent);
-
+            myCalendar.ReadDataFromFile();
             panelEventView.Show();
             pnl2.Hide();
           
@@ -57,6 +51,7 @@ namespace Project
 
         private void lnklblMainLogout_Click(object sender, EventArgs e)
         {
+            myCalendar.WriteDataToFile();
             this.Close();
         }
 
@@ -138,6 +133,7 @@ namespace Project
                         textBox11.Text = myCalendar[i].TimeSlot11;
 
                     }
+                    
                 }
             }
         }
