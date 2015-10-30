@@ -76,6 +76,7 @@
             this.txtBxEventName.Name = "txtBxEventName";
             this.txtBxEventName.Size = new System.Drawing.Size(205, 20);
             this.txtBxEventName.TabIndex = 4;
+            this.txtBxEventName.Click += new System.EventHandler(this.txtBxEventName_Click);
             // 
             // lblSubject
             // 
@@ -96,6 +97,7 @@
             this.btnAddEvent.TabIndex = 2;
             this.btnAddEvent.Text = "Add Event";
             this.btnAddEvent.UseVisualStyleBackColor = true;
+            this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
             // 
             // lblEventName
             // 

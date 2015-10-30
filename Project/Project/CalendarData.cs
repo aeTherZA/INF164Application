@@ -95,19 +95,21 @@ namespace Project
             set { event11 = value; }
         }
 
-        public CalendarData()
+        public CalendarData(DateTime time,string username)
         {
-            event1 = "Nothing Planned";
-            event2 = "Nothing Planned";
-            event3 = "Nothing Planned";
-            event4 = "Nothing Planned";
-            event5 = "Nothing Planned";
-            event6 = "Nothing Planned";
-            event7 = "Nothing Planned";
-            event8 = "Nothing Planned";
-            event9 = "Nothing Planned";
-            event10 = "Nothing Planned";
-            event11 = "Nothing Planned";
+            user = username;
+            EventDate = time;
+            event1 = "";
+            event2 = "";
+            event3 = "";
+            event4 = "";
+            event5 = "";
+            event6 = "";
+            event7 = "";
+            event8 = "";
+            event9 = "";
+            event10 = "";
+            event11 = "";
         }
 
         public DateTime getEvent()
