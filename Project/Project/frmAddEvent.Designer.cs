@@ -36,12 +36,16 @@
             this.btnAddEvent = new System.Windows.Forms.Button();
             this.lblEventName = new System.Windows.Forms.Label();
             this.dropDownEvents = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendarAddEvent
             // 
-            this.monthCalendarAddEvent.Location = new System.Drawing.Point(453, 41);
+            this.monthCalendarAddEvent.Location = new System.Drawing.Point(365, 91);
             this.monthCalendarAddEvent.Name = "monthCalendarAddEvent";
             this.monthCalendarAddEvent.TabIndex = 0;
             this.monthCalendarAddEvent.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendarAddEvent_DateSelected);
@@ -54,9 +58,9 @@
             this.groupBox1.Controls.Add(this.btnAddEvent);
             this.groupBox1.Controls.Add(this.lblEventName);
             this.groupBox1.Controls.Add(this.dropDownEvents);
-            this.groupBox1.Location = new System.Drawing.Point(44, 27);
+            this.groupBox1.Location = new System.Drawing.Point(10, 85);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(348, 176);
+            this.groupBox1.Size = new System.Drawing.Size(346, 168);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -64,7 +68,7 @@
             // 
             this.lblCurrentDate.AutoSize = true;
             this.lblCurrentDate.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentDate.ForeColor = System.Drawing.Color.MintCream;
+            this.lblCurrentDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCurrentDate.Location = new System.Drawing.Point(49, 14);
             this.lblCurrentDate.Name = "lblCurrentDate";
             this.lblCurrentDate.Size = new System.Drawing.Size(0, 18);
@@ -82,12 +86,13 @@
             // 
             this.lblSubject.AutoSize = true;
             this.lblSubject.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubject.ForeColor = System.Drawing.Color.MintCream;
+            this.lblSubject.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblSubject.Location = new System.Drawing.Point(49, 81);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(85, 18);
             this.lblSubject.TabIndex = 3;
             this.lblSubject.Text = "Event name:";
+            this.lblSubject.Click += new System.EventHandler(this.lblSubject_Click);
             // 
             // btnAddEvent
             // 
@@ -103,7 +108,7 @@
             // 
             this.lblEventName.AutoSize = true;
             this.lblEventName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventName.ForeColor = System.Drawing.Color.MintCream;
+            this.lblEventName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblEventName.Location = new System.Drawing.Point(6, 37);
             this.lblEventName.Name = "lblEventName";
             this.lblEventName.Size = new System.Drawing.Size(128, 18);
@@ -131,12 +136,45 @@
             this.dropDownEvents.Size = new System.Drawing.Size(206, 21);
             this.dropDownEvents.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(-14, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(626, 78);
+            this.panel1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(30, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 42);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "New Events";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(33, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(271, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Select the date and time to save a new event";
+            // 
             // frmAddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(696, 231);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(608, 264);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.monthCalendarAddEvent);
             this.Name = "frmAddEvent";
@@ -144,6 +182,8 @@
             this.Load += new System.EventHandler(this.frmAddEvent_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -158,5 +198,8 @@
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Button btnAddEvent;
         private System.Windows.Forms.Label lblCurrentDate;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

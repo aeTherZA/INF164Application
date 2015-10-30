@@ -140,9 +140,9 @@
             this.pnl2.Controls.Add(this.panel7);
             this.pnl2.Controls.Add(this.panel6);
             this.pnl2.Controls.Add(this.panel2);
-            this.pnl2.Location = new System.Drawing.Point(512, 36);
+            this.pnl2.Location = new System.Drawing.Point(141, 61);
             this.pnl2.Name = "pnl2";
-            this.pnl2.Size = new System.Drawing.Size(26, 19);
+            this.pnl2.Size = new System.Drawing.Size(864, 493);
             this.pnl2.TabIndex = 5;
             // 
             // panel7
@@ -869,7 +869,6 @@
             this.lblLastLocation.Size = new System.Drawing.Size(116, 16);
             this.lblLastLocation.TabIndex = 14;
             this.lblLastLocation.Text = "Location : Roos Hall";
-            this.lblLastLocation.Click += new System.EventHandler(this.lblLastLocation_Click);
             // 
             // lblLastSubject
             // 

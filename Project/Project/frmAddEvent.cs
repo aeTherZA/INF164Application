@@ -324,7 +324,7 @@ namespace Project
                     }
 
             }
-
+                MessageBox.Show("The event : " + txtBxEventName.Text + " was added.");
                 refreshData();
                 txtBxEventName.Text = "";
                 dropDownEvents.SelectedText = "";
@@ -470,8 +470,12 @@ namespace Project
         private void txtBxEventName_Click(object sender, EventArgs e)
         {
             txtBxEventName.ForeColor = Color.Black;
-            lblSubject.ForeColor = Color.White;
             txtBxEventName.Text = "";
+        }
+
+        private void lblSubject_Click(object sender, EventArgs e)
+        {
+
         }
 
         }

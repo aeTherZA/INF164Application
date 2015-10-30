@@ -45,9 +45,107 @@ namespace Project
             myCalendar.ReadDataFromFile();
             panelEventView.Show();
             pnl2.Hide();
-          
+
+            //--------------------------------------------------------------
+            // Set label data to empty load state
+            lbl1stSubject.Text = "Subject : ";
+            lbl1stStart.Text = "Start : ";
+            lbl1stEnd.Text = "End : ";
+
+            lblLastSubject.Text = "Subject : ";
+            lblLastStart.Text = "Start : ";
+            lblLastEnd.Text = "End : ";
+
+            //--------------------------------------------------------------
+            setFirstClassData();
             
         }
+        // Ill Check this asap.. im seeing double already :(
+        public void setFirstClassData()
+        {
+            
+            bool ClassFound = false;
+
+            if ((!(string.IsNullOrWhiteSpace(textBox1.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox1.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox2.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox2.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox3.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox3.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox4.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox4.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox5.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox5.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox6.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox6.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox7.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox7.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox8.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox8.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox9.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox9.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox10.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox10.Text;
+                ClassFound = true;
+            }
+
+            else if ((!(string.IsNullOrWhiteSpace(textBox11.Text))) || ClassFound == false)
+            {
+                lbl1stSubject.Text = "Subject : " + textBox11.Text;
+                ClassFound = true;
+            }
+            else
+            {
+                lbl1stSubject.Text = "Subject : NON FOR DAY";
+            }
+            
+        }
+
+        public void setLastClassData()
+        {
+            for (int i = 11; i > 0; i--)
+            {
+                
+            }
+        }
+
 
         private void lnklblMainLogout_Click(object sender, EventArgs e)
         {
@@ -136,6 +234,7 @@ namespace Project
                     
                 }
             }
+            setFirstClassData();
         }
 
         private void btnAddEvent_Click(object sender, EventArgs e)
