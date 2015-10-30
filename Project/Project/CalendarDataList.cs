@@ -41,9 +41,9 @@ namespace Project
                 }
                 extractData.Close();
             }
-            catch (FileNotFoundException exception)
+            catch (FileNotFoundException)
             {
-                MessageBox.Show("Exception :  " + exception);
+                MessageBox.Show("Calendar Data Not Found\nAdd event to create data.");
             }
         }
     }
