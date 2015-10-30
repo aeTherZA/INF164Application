@@ -334,13 +334,14 @@ namespace Project
 
         private void refreshData()
         {
-            
+            bool doesExist = false;
             for (int i = 0; i < sudoData.Count(); i++)
             {
                 if (sudoData[i].getUser() == currentUser.Username)
                 {
                     if (sudoData[i].getEvent() == monthCalendarAddEvent.SelectionStart)
                     {
+                        doesExist = true;
 
                         if (sudoData[i].TimeSlot1 != "")
                         {
@@ -397,7 +398,7 @@ namespace Project
                         }
                         else
                         {
-                            dropDownEvents.Items[6] = ("13:30-14:30 - " + sudoData[i].TimeSlot7);
+                            dropDownEvents.Items[6] = ("13:30-14:30 - Available");
                         }
                         if (sudoData[i].TimeSlot8 != "")
                         {
@@ -436,6 +437,33 @@ namespace Project
                     }
                 }
               
+            }
+            if(!doesExist)
+            {
+                
+                        
+                           dropDownEvents.Items[0] = ("07:30-08:30 - Available");
+                  
+                     
+                            dropDownEvents.Items[1] = ("08:30-09:30 - Available");
+                     
+                            dropDownEvents.Items[2] = ("09:30-10:30 - Available");
+                     
+                            dropDownEvents.Items[3] = ("10:30-11:30 - Available");
+                     
+                            dropDownEvents.Items[4] = ("11:30-12:30 - Available");
+                      
+                            dropDownEvents.Items[5] = ("12:30-13:30 - Available");
+                      
+                            dropDownEvents.Items[6] = ("13:30-14:30 - Available");
+                       
+                            dropDownEvents.Items[7] = ("14:30-15:30 - Available");
+                       
+                            dropDownEvents.Items[8] = ("15:30-16:30 - Available");
+                      
+                            dropDownEvents.Items[9] = ("16:30-17:30 - Available");
+                           dropDownEvents.Items[10] = ("17:30-18:30 - Available");
+                        
             }
         }
 
