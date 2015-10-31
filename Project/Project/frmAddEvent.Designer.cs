@@ -36,18 +36,26 @@
             this.btnAddEvent = new System.Windows.Forms.Button();
             this.lblEventName = new System.Windows.Forms.Label();
             this.dropDownEvents = new System.Windows.Forms.ComboBox();
+            this.btnWeekly = new System.Windows.Forms.Button();
+            this.lblWeekly = new System.Windows.Forms.Label();
+            this.dropDownDays = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendarAddEvent
             // 
             this.monthCalendarAddEvent.Location = new System.Drawing.Point(453, 41);
+            this.monthCalendarAddEvent.MaxSelectionCount = 365;
             this.monthCalendarAddEvent.Name = "monthCalendarAddEvent";
             this.monthCalendarAddEvent.TabIndex = 0;
-            this.monthCalendarAddEvent.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendarAddEvent_DateSelected);
+            this.monthCalendarAddEvent.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendarAddEvent_DateChanged);
+            this.monthCalendarAddEvent.Enter += new System.EventHandler(this.monthCalendarAddEvent_Enter);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dropDownDays);
+            this.groupBox1.Controls.Add(this.lblWeekly);
+            this.groupBox1.Controls.Add(this.btnWeekly);
             this.groupBox1.Controls.Add(this.lblCurrentDate);
             this.groupBox1.Controls.Add(this.txtBxEventName);
             this.groupBox1.Controls.Add(this.lblSubject);
@@ -72,9 +80,10 @@
             // 
             // txtBxEventName
             // 
-            this.txtBxEventName.Location = new System.Drawing.Point(137, 78);
+            this.txtBxEventName.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txtBxEventName.Location = new System.Drawing.Point(138, 79);
             this.txtBxEventName.Name = "txtBxEventName";
-            this.txtBxEventName.Size = new System.Drawing.Size(205, 20);
+            this.txtBxEventName.Size = new System.Drawing.Size(205, 26);
             this.txtBxEventName.TabIndex = 4;
             this.txtBxEventName.Click += new System.EventHandler(this.txtBxEventName_Click);
             // 
@@ -91,9 +100,9 @@
             // 
             // btnAddEvent
             // 
-            this.btnAddEvent.Location = new System.Drawing.Point(78, 132);
+            this.btnAddEvent.Location = new System.Drawing.Point(137, 144);
             this.btnAddEvent.Name = "btnAddEvent";
-            this.btnAddEvent.Size = new System.Drawing.Size(194, 23);
+            this.btnAddEvent.Size = new System.Drawing.Size(205, 26);
             this.btnAddEvent.TabIndex = 2;
             this.btnAddEvent.Text = "Add Event";
             this.btnAddEvent.UseVisualStyleBackColor = true;
@@ -113,6 +122,8 @@
             // 
             // dropDownEvents
             // 
+            this.dropDownEvents.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropDownEvents.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.dropDownEvents.FormattingEnabled = true;
             this.dropDownEvents.Items.AddRange(new object[] {
             "07:30-08:30",
@@ -128,8 +139,46 @@
             "17:30-18:30"});
             this.dropDownEvents.Location = new System.Drawing.Point(137, 37);
             this.dropDownEvents.Name = "dropDownEvents";
-            this.dropDownEvents.Size = new System.Drawing.Size(206, 21);
+            this.dropDownEvents.Size = new System.Drawing.Size(206, 26);
             this.dropDownEvents.TabIndex = 0;
+            // 
+            // btnWeekly
+            // 
+            this.btnWeekly.Location = new System.Drawing.Point(26, 147);
+            this.btnWeekly.Name = "btnWeekly";
+            this.btnWeekly.Size = new System.Drawing.Size(75, 23);
+            this.btnWeekly.TabIndex = 6;
+            this.btnWeekly.Text = "Add Weekly";
+            this.btnWeekly.UseVisualStyleBackColor = true;
+            this.btnWeekly.Click += new System.EventHandler(this.btnWeekly_Click);
+            // 
+            // lblWeekly
+            // 
+            this.lblWeekly.AutoSize = true;
+            this.lblWeekly.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.lblWeekly.ForeColor = System.Drawing.Color.MintCream;
+            this.lblWeekly.Location = new System.Drawing.Point(107, 112);
+            this.lblWeekly.Name = "lblWeekly";
+            this.lblWeekly.Size = new System.Drawing.Size(0, 18);
+            this.lblWeekly.TabIndex = 7;
+            // 
+            // dropDownDays
+            // 
+            this.dropDownDays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropDownDays.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.dropDownDays.FormattingEnabled = true;
+            this.dropDownDays.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"});
+            this.dropDownDays.Location = new System.Drawing.Point(6, 109);
+            this.dropDownDays.Name = "dropDownDays";
+            this.dropDownDays.Size = new System.Drawing.Size(95, 26);
+            this.dropDownDays.TabIndex = 8;
             // 
             // frmAddEvent
             // 
@@ -158,5 +207,8 @@
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Button btnAddEvent;
         private System.Windows.Forms.Label lblCurrentDate;
+        private System.Windows.Forms.Label lblWeekly;
+        private System.Windows.Forms.Button btnWeekly;
+        private System.Windows.Forms.ComboBox dropDownDays;
     }
 }

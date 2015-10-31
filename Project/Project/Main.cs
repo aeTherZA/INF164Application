@@ -43,7 +43,10 @@ namespace Project
         {
             lblLogin.Text = "Logged in as " + currentUser.Username;
             myCalendar.ReadDataFromFile();
+            refresh();
             panelEventView.Show();
+            lbl1stSubject.Text = firstClass(ref myCalendar);
+            lblLastSubject.Text = lastClass(ref myCalendar);
             pnl2.Hide();
           
             
@@ -86,6 +89,7 @@ namespace Project
         private void lnklblLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("You have logged out");
+            myCalendar.WriteDataToFile();
             this.Close();
         }
 
@@ -99,50 +103,15 @@ namespace Project
 
         }
 
-        private void monthCalendar_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            //Reset Data
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
-            textBox7.Text = "";
-            textBox8.Text = "";
-            textBox9.Text = "";
-            textBox10.Text = "";
-            textBox11.Text = "";
-
-            for(int i = 0; i < myCalendar.Count();i++)
-            {
-                if(myCalendar[i].getUser() == currentUser.Username)
-                {
-                    if(myCalendar[i].getEvent() == monthCalendar.SelectionStart)
-                    {
-                        textBox1.Text = myCalendar[i].TimeSlot1;
-                        textBox2.Text = myCalendar[i].TimeSlot2;
-                        textBox3.Text = myCalendar[i].TimeSlot3;
-                        textBox4.Text = myCalendar[i].TimeSlot4;
-                        textBox5.Text = myCalendar[i].TimeSlot5;
-                        textBox6.Text = myCalendar[i].TimeSlot6;
-                        textBox7.Text = myCalendar[i].TimeSlot7;
-                        textBox8.Text = myCalendar[i].TimeSlot8;
-                        textBox9.Text = myCalendar[i].TimeSlot9;
-                        textBox10.Text = myCalendar[i].TimeSlot10;
-                        textBox11.Text = myCalendar[i].TimeSlot11;
-
-                    }
-                    
-                }
-            }
-        }
+    
 
         private void btnAddEvent_Click(object sender, EventArgs e)
         {
             frmAddEvent newEvent = new frmAddEvent();
             newEvent.passData(ref myCalendar,ref currentUser);
             newEvent.ShowDialog();
+            newEvent.retrieveData(ref myCalendar);
+            
         }
 
         private void lbl1stSubject_Click(object sender, EventArgs e)
@@ -224,6 +193,172 @@ namespace Project
         {
             panelEventView.Show();
             pnl2.Hide();
+        }
+
+        private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            refresh();
+            lbl1stSubject.Text = firstClass(ref myCalendar);
+            lblLastSubject.Text = lastClass(ref myCalendar);
+        }
+
+        private void refresh()
+        {
+            //Reset Data
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+
+            for (int i = 0; i < myCalendar.Count(); i++)
+            {
+                if (myCalendar[i].getUser() == currentUser.Username)
+                {
+                    if (myCalendar[i].getEvent() == monthCalendar.SelectionStart)
+                    {
+                        textBox1.Text = myCalendar[i].TimeSlot1;
+                        textBox2.Text = myCalendar[i].TimeSlot2;
+                        textBox3.Text = myCalendar[i].TimeSlot3;
+                        textBox4.Text = myCalendar[i].TimeSlot4;
+                        textBox5.Text = myCalendar[i].TimeSlot5;
+                        textBox6.Text = myCalendar[i].TimeSlot6;
+                        textBox7.Text = myCalendar[i].TimeSlot7;
+                        textBox8.Text = myCalendar[i].TimeSlot8;
+                        textBox9.Text = myCalendar[i].TimeSlot9;
+                        textBox10.Text = myCalendar[i].TimeSlot10;
+                        textBox11.Text = myCalendar[i].TimeSlot11;
+
+                    }
+
+                }
+        }
+        }
+        private string firstClass(ref CalendarDataList obj)
+        {
+            
+            for (int i = 0; i < obj.Count; i++)
+            {
+                if (obj[i].getUser() == currentUser.Username)
+                {
+                    if (obj[i].getEvent() == monthCalendar.SelectionStart)
+                    {
+                        if(obj[i].TimeSlot1 != "")
+                        {
+                            return obj[i].TimeSlot1;
+                        }
+                        if (obj[i].TimeSlot2 != "")
+                        {
+                            return obj[i].TimeSlot2;
+                        }
+                        if (obj[i].TimeSlot3 != "")
+                        {
+                            return obj[i].TimeSlot3;
+                        }
+                        if (obj[i].TimeSlot4 != "")
+                        {
+                            return obj[i].TimeSlot4;
+                        }
+                        if (obj[i].TimeSlot5 != "")
+                        {
+                            return obj[i].TimeSlot5;
+                        }
+                        if (obj[i].TimeSlot6 != "")
+                        {
+                            return obj[i].TimeSlot6;
+                        }
+                        if (obj[i].TimeSlot7 != "")
+                        {
+                            return obj[i].TimeSlot7;
+                        }
+                        if (obj[i].TimeSlot8 != "")
+                        {
+                            return obj[i].TimeSlot8;
+                        }
+                        if (obj[i].TimeSlot9 != "")
+                        {
+                            return obj[i].TimeSlot9;
+                        }
+                        if (obj[i].TimeSlot10 != "")
+                        {
+                            return obj[i].TimeSlot10;
+                        }
+                        if (obj[i].TimeSlot11 != "")
+                        {
+                            return obj[i].TimeSlot11;
+                        }
+                    }
+                   
+                }
+                
+                
+            }
+            return "Nothing Scheduled";
+        }
+        private string lastClass(ref CalendarDataList obj)
+        {
+            
+            for(int i = obj.Count-1;i >= 0;i--)
+            {
+                if(obj[i].getUser() == currentUser.Username)
+                {
+                    if(obj[i].getEvent() == monthCalendar.SelectionStart)
+                    {
+                        if (obj[i].TimeSlot11 != "")
+                        {
+                            return obj[i].TimeSlot11;
+                        }
+                        if (obj[i].TimeSlot10 != "")
+                        {
+                            return obj[i].TimeSlot10;
+                        }
+                        if (obj[i].TimeSlot9 != "")
+                        {
+                            return obj[i].TimeSlot9;
+                        }
+                        if (obj[i].TimeSlot8 != "")
+                        {
+                            return obj[i].TimeSlot8;
+                        }
+                        if (obj[i].TimeSlot7 != "")
+                        {
+                            return obj[i].TimeSlot7;
+                        }
+                        if (obj[i].TimeSlot6 != "")
+                        {
+                            return obj[i].TimeSlot6;
+                        }
+                        if (obj[i].TimeSlot5 != "")
+                        {
+                            return obj[i].TimeSlot5;
+                        }
+                        if (obj[i].TimeSlot4 != "")
+                        {
+                            return obj[i].TimeSlot4;
+                        }
+                        if (obj[i].TimeSlot3 != "")
+                        {
+                            return obj[i].TimeSlot3;
+                        }
+                        if (obj[i].TimeSlot2 != "")
+                        {
+                            return obj[i].TimeSlot2;
+                        }
+                        if (obj[i].TimeSlot1 != "")
+                        {
+                            return obj[i].TimeSlot1;
+                        }
+                    }
+                }
+            }
+            return "Nothing Scheduled";
+
         }
     }
 }
