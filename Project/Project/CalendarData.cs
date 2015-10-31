@@ -27,6 +27,18 @@ namespace Project
         private string event9;
         private string event10;
         private string event11;
+        private string location1;
+        private string location2;
+        private string location3;
+        private string location4;
+        private string location5;
+        private string location6;
+        private string location7;
+        private string location8;
+        private string location9;
+        private string location10;
+        private string location11;
+        
 
         [DisplayName("7:30-8:30")]
         public string TimeSlot1
@@ -95,6 +107,70 @@ namespace Project
             set { event11 = value; }
         }
 
+        public string LocationEvent1
+        {
+            get { return location1; }
+            set { location1 = value; }
+        }
+
+        public string LocationEvent2
+        {
+            get { return location2; }
+            set { location2 = value; }
+        }
+        
+        public string LocationEvent3
+        {
+            get { return location3; }
+            set { location3 = value; }
+        }
+
+        public string LocationEvent4
+        {
+            get { return location4; }
+            set { location4 = value; }
+        }
+
+        public string LocationEvent5
+        {
+            get { return location5; }
+            set { location5 = value; }
+        }
+
+        public string LocationEvent6
+        {
+            get { return location6; }
+            set { location6 = value; }
+        }
+
+        public string LocationEvent7
+        {
+            get { return location7; }
+            set { location7 = value; }
+        }
+
+        public string LocationEvent8
+        {
+            get { return location8; }
+            set { location8 = value; }
+        }
+
+        public string LocationEvent9
+        {
+            get { return location9; }
+            set { location9 = value; }
+        }
+
+        public string LocationEvent10
+        {
+            get { return location10; }
+            set { location10 = value; }
+        }
+        public string LocationEvent11
+        {
+            get { return location11; }
+            set { location11 = value; }
+        }
         public CalendarData(DateTime time,string username)
         {
             user = username;
@@ -110,6 +186,17 @@ namespace Project
             event9 = "";
             event10 = "";
             event11 = "";
+            location1 = "Not Specified";
+            location2 = "Not Specified";
+            location3 = "Not Specified";
+            location4 = "Not Specified";
+            location5 = "Not Specified";
+            location6 = "Not Specified";
+            location7 = "Not Specified";
+            location8 = "Not Specified";
+            location9 = "Not Specified";
+            location10 = "Not Specified";
+            location11 = "Not Specified";
         }
 
         public DateTime getEvent()

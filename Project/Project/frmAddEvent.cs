@@ -49,10 +49,13 @@ namespace Project
         private void btnAddEvent_Click(object sender, EventArgs e)
         {
             //Check for Input
-            if ((txtBxEventName.Text == "") || (txtBxEventName.Text == "*"))
+            if ((txtBxEventName.Text == "") || (txtBxEventName.Text == "*") || (txtBxLocationAdd.Text == "") || (txtBxLocationAdd.Text == "*"))
             {
                 txtBxEventName.ForeColor = Color.Yellow;
                 lblSubject.ForeColor = Color.Yellow;
+                lblLocationAdd.ForeColor = Color.Yellow;
+                txtBxLocationAdd.ForeColor = Color.Yellow;
+                txtBxLocationAdd.Text = "*";
                 txtBxEventName.Text = "*";
                 MessageBox.Show("Fill In Event");
                 
@@ -214,9 +217,10 @@ namespace Project
         private void txtBxEventName_Click(object sender, EventArgs e)
         {
             txtBxEventName.ForeColor = Color.Black;
-            lblSubject.ForeColor = Color.White;
+            lblSubject.ForeColor = Color.MintCream;
             txtBxEventName.Text = "";
         }
+       
 
         private void monthCalendarAddEvent_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -272,66 +276,77 @@ namespace Project
                                         if (sudoData[index].TimeSlot1 == "")
                                         {
                                             sudoData[index].TimeSlot1 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent1 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 1:
                                         if (sudoData[index].TimeSlot2 == "")
                                         {
                                             sudoData[index].TimeSlot2 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent2 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 2:
                                         if (sudoData[index].TimeSlot3 == "")
                                         {
                                             sudoData[index].TimeSlot3 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent3 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 3:
                                         if (sudoData[index].TimeSlot4 == "")
                                         {
                                             sudoData[index].TimeSlot4 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent4 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 4:
                                         if (sudoData[index].TimeSlot5 == "")
                                         {
                                             sudoData[index].TimeSlot5 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent5 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 5:
                                         if (sudoData[index].TimeSlot6 == "")
                                         {
                                             sudoData[index].TimeSlot6 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent6 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 6:
                                         if (sudoData[index].TimeSlot7 == "")
                                         {
                                             sudoData[index].TimeSlot7 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent7 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 7:
                                         if (sudoData[index].TimeSlot8 == "")
                                         {
                                             sudoData[index].TimeSlot8 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent8 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 8:
                                         if (sudoData[index].TimeSlot9 == "")
                                         {
                                             sudoData[index].TimeSlot9 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent9 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 9:
                                         if (sudoData[index].TimeSlot10 == "")
                                         {
                                             sudoData[index].TimeSlot10 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent10 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                     case 10:
                                         if (sudoData[index].TimeSlot11 == "")
                                         {
                                             sudoData[index].TimeSlot11 = txtBxEventName.Text;
+                                            sudoData[index].LocationEvent11 = txtBxLocationAdd.Text;
                                         }
                                         break;
                                 }
@@ -357,41 +372,52 @@ namespace Project
                     {
                         case 0:
                             sudoData[(sudoData.Count) - 1].TimeSlot1 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent1 = txtBxLocationAdd.Text;
 
                             break;
                         case 1:
                             sudoData[(sudoData.Count) - 1].TimeSlot2 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent2 = txtBxLocationAdd.Text;
 
                             break;
                         case 2:
                             sudoData[(sudoData.Count) - 1].TimeSlot3 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent3 = txtBxLocationAdd.Text;
 
                             break;
                         case 3:
                             sudoData[(sudoData.Count) - 1].TimeSlot4 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent4 = txtBxLocationAdd.Text;
 
                             break;
                         case 4:
                             sudoData[(sudoData.Count) - 1].TimeSlot5 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent5 = txtBxLocationAdd.Text;
 
                             break;
                         case 5:
                             sudoData[(sudoData.Count) - 1].TimeSlot6 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent6 = txtBxLocationAdd.Text;
                             break;
                         case 6:
                             sudoData[(sudoData.Count) - 1].TimeSlot7 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent7 = txtBxLocationAdd.Text;
                             break;
                         case 7:
                             sudoData[(sudoData.Count) - 1].TimeSlot8 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent8 = txtBxLocationAdd.Text;
                             break;
                         case 8:
                             sudoData[(sudoData.Count) - 1].TimeSlot9 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent9 = txtBxLocationAdd.Text;
                             break;
                         case 9:
                             sudoData[(sudoData.Count) - 1].TimeSlot10 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent10 = txtBxLocationAdd.Text;
                             break;
                         case 10:
                             sudoData[(sudoData.Count) - 1].TimeSlot11 = txtBxEventName.Text;
+                            sudoData[(sudoData.Count) - 1].LocationEvent11 = txtBxLocationAdd.Text;
                             break;
 
                     }
@@ -407,7 +433,7 @@ namespace Project
             DateTime current = monthCalendarAddEvent.SelectionStart;
             while(current <= monthCalendarAddEvent.SelectionEnd)
             {
-                //MessageBox.Show("Current Date : " + Convert.ToString(current) + " and End Date is " + Convert.ToString(monthCalendarAddEvent.SelectionEnd));
+               
                 if(current.ToString("D").Contains(dropDownDays.SelectedItem.ToString()))
                 {
                     createEvent(current);
@@ -418,6 +444,17 @@ namespace Project
             }
             MessageBox.Show("Successfully Added Events for " + dropDownDays.SelectedItem.ToString() + " between :\n\n" + monthCalendarAddEvent.SelectionStart.ToString("D") + " to " + monthCalendarAddEvent.SelectionEnd.ToString("D") + ".");
         }
+
+        private void txtBxLocationAdd_Click_1(object sender, EventArgs e)
+        {
+            txtBxLocationAdd.ForeColor = Color.Black;
+            lblLocationAdd.ForeColor = Color.MintCream;
+            txtBxLocationAdd.Text = "";
+        }
+
+        
+
+      
 
         }
         

@@ -251,46 +251,80 @@ namespace Project
                     {
                         if(obj[i].TimeSlot1 != "")
                         {
+                            lbl1stStart.Text = "Start - 07:30";
+                            lbl1stEnd.Text = "End - 08:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent1;
                             return obj[i].TimeSlot1;
                         }
                         if (obj[i].TimeSlot2 != "")
                         {
+                            lbl1stStart.Text = "Start - 08:30";
+                            lbl1stEnd.Text = "End - 09:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent2;
                             return obj[i].TimeSlot2;
                         }
                         if (obj[i].TimeSlot3 != "")
                         {
+                            lbl1stStart.Text = "Start - 09:30";
+                            lbl1stEnd.Text = "End - 10:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent3;
                             return obj[i].TimeSlot3;
                         }
                         if (obj[i].TimeSlot4 != "")
                         {
+                            lbl1stStart.Text = "Start - 10:30";
+                            lbl1stEnd.Text = "End - 11:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent4;
                             return obj[i].TimeSlot4;
                         }
                         if (obj[i].TimeSlot5 != "")
                         {
+                            lbl1stStart.Text = "Start - 11:30";
+                            lbl1stEnd.Text = "End - 12:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent5;
                             return obj[i].TimeSlot5;
                         }
                         if (obj[i].TimeSlot6 != "")
                         {
+                            lbl1stStart.Text = "Start - 12:30";
+                            lbl1stEnd.Text = "End - 13:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent6;
                             return obj[i].TimeSlot6;
                         }
                         if (obj[i].TimeSlot7 != "")
                         {
+                            lbl1stStart.Text = "Start - 13:30";
+                            lbl1stEnd.Text = "End - 14:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent7;
                             return obj[i].TimeSlot7;
                         }
                         if (obj[i].TimeSlot8 != "")
                         {
+                            lbl1stStart.Text = "Start - 14:30";
+                            lbl1stEnd.Text = "End - 15:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent8;
                             return obj[i].TimeSlot8;
                         }
                         if (obj[i].TimeSlot9 != "")
                         {
+                            lbl1stStart.Text = "Start - 15:30";
+                            lbl1stEnd.Text = "End - 16:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent9;
                             return obj[i].TimeSlot9;
                         }
                         if (obj[i].TimeSlot10 != "")
                         {
+                            lbl1stStart.Text = "Start - 16:30";
+                            lbl1stEnd.Text = "End - 17:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent10;
                             return obj[i].TimeSlot10;
+
                         }
                         if (obj[i].TimeSlot11 != "")
                         {
+                            lbl1stStart.Text = "Start - 17:30";
+                            lbl1stEnd.Text = "End - 18:30";
+                            lbl1stLocation.Text = obj[i].LocationEvent11;
                             return obj[i].TimeSlot11;
                         }
                     }
@@ -312,46 +346,79 @@ namespace Project
                     {
                         if (obj[i].TimeSlot11 != "")
                         {
+                            lblLastStart.Text = "Start - 17:30";
+                            lblLastEnd.Text = "End - 18:30";
+                            lblLastLocation.Text = obj[i].LocationEvent11;
                             return obj[i].TimeSlot11;
                         }
                         if (obj[i].TimeSlot10 != "")
                         {
+                            lblLastStart.Text = "Start - 16:30";
+                            lblLastEnd.Text = "End - 17:30";
+                            lblLastLocation.Text = obj[i].LocationEvent10;
                             return obj[i].TimeSlot10;
                         }
                         if (obj[i].TimeSlot9 != "")
                         {
+                            lblLastStart.Text = "Start - 15:30";
+                            lblLastEnd.Text = "End - 16:30";
+                            lblLastLocation.Text = obj[i].LocationEvent9;
                             return obj[i].TimeSlot9;
                         }
                         if (obj[i].TimeSlot8 != "")
                         {
+                            lblLastStart.Text = "Start - 14:30";
+                            lblLastEnd.Text = "End - 15:30";
+                            lblLastLocation.Text = obj[i].LocationEvent8;
                             return obj[i].TimeSlot8;
                         }
                         if (obj[i].TimeSlot7 != "")
                         {
+                            lblLastStart.Text = "Start - 13:30";
+                            lblLastEnd.Text = "End - 14:30";
+                            lblLastLocation.Text = obj[i].LocationEvent7;
                             return obj[i].TimeSlot7;
                         }
                         if (obj[i].TimeSlot6 != "")
                         {
+                            lblLastStart.Text = "Start - 12:30";
+                            lblLastEnd.Text = "End - 13:30";
+                            lblLastLocation.Text = obj[i].LocationEvent6;
                             return obj[i].TimeSlot6;
                         }
                         if (obj[i].TimeSlot5 != "")
                         {
+                            lblLastStart.Text = "Start - 11:30";
+                            lblLastEnd.Text = "End - 12:30";
+                            lblLastLocation.Text = obj[i].LocationEvent5;
                             return obj[i].TimeSlot5;
                         }
                         if (obj[i].TimeSlot4 != "")
                         {
+                            lblLastStart.Text = "Start - 10:30";
+                            lblLastEnd.Text = "End - 11:30";
+                            lblLastLocation.Text = obj[i].LocationEvent4;
                             return obj[i].TimeSlot4;
                         }
                         if (obj[i].TimeSlot3 != "")
                         {
+                            lblLastStart.Text = "Start - 09:30";
+                            lblLastEnd.Text = "End - 10:30";
+                            lblLastLocation.Text = obj[i].LocationEvent3;
                             return obj[i].TimeSlot3;
                         }
                         if (obj[i].TimeSlot2 != "")
                         {
+                            lblLastStart.Text = "Start - 08:30";
+                            lblLastEnd.Text = "End - 09:30";
+                            lblLastLocation.Text = obj[i].LocationEvent2;
                             return obj[i].TimeSlot2;
                         }
                         if (obj[i].TimeSlot1 != "")
                         {
+                            lblLastStart.Text = " Start - 07:30";
+                            lblLastEnd.Text = "End - 08:30";
+                            lblLastLocation.Text = obj[i].LocationEvent1;
                             return obj[i].TimeSlot1;
                         }
                     }
