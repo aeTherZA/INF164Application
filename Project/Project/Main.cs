@@ -126,8 +126,10 @@ namespace Project
 
         private void btnUpdateUserData_Click(object sender, EventArgs e)
         {
-            panelEventView.Hide();
+            
+            panelDelete.Hide();
             pnl2.Show();
+            panelEventView.Hide();
             lblCName.Text = currentUser.Username;
             lblCPassword.Text = currentUser.Password;
             lblCEmail.Text = currentUser.Email;
@@ -135,36 +137,26 @@ namespace Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string newUer, newPass, newEmail;
+            string newUer = "", newPass = "", newEmail = "";
             bool allFieldCorrect = true;
 
-            if (tbUserName.Text == "")
+            if (tbUserName.Text != "")
             {
-                newUer = currentUser.Username;
-            }
-            else
-            {
+                
                 newUer = tbUserName.Text;
             }
-
-            if (tbPassw.Text == "")
-            {
-                newPass = currentUser.Password;
-            }
-            else
+          
+            if (tbPassw.Text != "")
             {
                 newPass = tbPassw.Text;
+                
             }
-
-            if (tbEmailAddress.Text == "")
-            {
-                newEmail = currentUser.Email;
-            }
-            else
+            if (tbEmailAddress.Text != "")
             {
                 newEmail = tbEmailAddress.Text;
+                
             }
-
+         
             if (newUer != tbValidateUsername.Text)
             {
                 allFieldCorrect = false;
@@ -180,6 +172,48 @@ namespace Project
             if (allFieldCorrect)
             {
                 //Update the data
+
+                
+                
+
+                if (newUer != "")
+                {
+                    DataChanged = true;
+                    currentUser.Username = newUer;
+                    //Update Calendar User
+                    for (int i = 0; i < myCalendar.Count; i++)
+                    {
+                        if (myCalendar[i].getUser() == currentUser.Username)
+                        {
+                            myCalendar[i].setUser(newUer);
+                        }
+                    }
+                    lblLogin.Text = "Logged in as " + currentUser.Username;
+                }
+                if(newPass != "")
+                {
+                    DataChanged = true;
+                    currentUser.Password = newPass;
+                }
+                if(newEmail != "")
+                {
+                    DataChanged = true;
+                    currentUser.Email = newEmail;
+                }
+
+                tbEmailAddress.Text = "";
+                tbPassw.Text = "";
+                tbValidatePassw.Text = "";
+                tbValidateUsername.Text = "";
+                tbUserName.Text = "";
+                
+                //Display new data.
+                lblCName.Text = currentUser.Username;
+                lblCPassword.Text = currentUser.Password;
+                lblCEmail.Text = currentUser.Email;
+
+
+                
             }
           
         }
@@ -191,9 +225,10 @@ namespace Project
 
         private void btnViewProfile_Click(object sender, EventArgs e)
         {
-            panelEventView.Show();
             pnl2.Hide();
+            panelEventView.Show();
             panelDelete.Hide();
+           
         }
 
         private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
@@ -432,8 +467,9 @@ namespace Project
         private void btnDelete_Click(object sender, EventArgs e)
         {
             pnl2.Hide();
-            panelEventView.Hide();
             panelDelete.Show();
+            panelEventView.Hide();
+            
             reinitializeDataGridDelete();
           
             
