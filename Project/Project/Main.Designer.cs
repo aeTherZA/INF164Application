@@ -106,6 +106,8 @@
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.pnl2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -121,11 +123,13 @@
             this.grpBoxFirstClass.SuspendLayout();
             this.panelDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDelete)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelMain.Controls.Add(this.panel1);
             this.panelMain.Controls.Add(this.pnl2);
             this.panelMain.Controls.Add(this.panelEventView);
             this.panelMain.Controls.Add(this.lnklblLogout);
@@ -150,7 +154,7 @@
             this.pnl2.Controls.Add(this.panel2);
             this.pnl2.Location = new System.Drawing.Point(141, 61);
             this.pnl2.Name = "pnl2";
-            this.pnl2.Size = new System.Drawing.Size(860, 493);
+            this.pnl2.Size = new System.Drawing.Size(860, 501);
             this.pnl2.TabIndex = 5;
             // 
             // panel7
@@ -389,7 +393,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.BackColor = System.Drawing.Color.MintCream;
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -898,9 +902,9 @@
             this.btnUpdateUserData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnUpdateUserData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdateUserData.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateUserData.Location = new System.Drawing.Point(3, 270);
+            this.btnUpdateUserData.Location = new System.Drawing.Point(0, 273);
             this.btnUpdateUserData.Name = "btnUpdateUserData";
-            this.btnUpdateUserData.Size = new System.Drawing.Size(132, 65);
+            this.btnUpdateUserData.Size = new System.Drawing.Size(141, 65);
             this.btnUpdateUserData.TabIndex = 11;
             this.btnUpdateUserData.Text = "User Settings";
             this.btnUpdateUserData.UseVisualStyleBackColor = false;
@@ -913,9 +917,9 @@
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.ForeColor = System.Drawing.Color.MintCream;
-            this.btnDelete.Location = new System.Drawing.Point(3, 199);
+            this.btnDelete.Location = new System.Drawing.Point(0, 202);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(132, 65);
+            this.btnDelete.Size = new System.Drawing.Size(141, 65);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete Event";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -928,9 +932,9 @@
             this.btnAddEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAddEvent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddEvent.ForeColor = System.Drawing.Color.MintCream;
-            this.btnAddEvent.Location = new System.Drawing.Point(3, 130);
+            this.btnAddEvent.Location = new System.Drawing.Point(0, 133);
             this.btnAddEvent.Name = "btnAddEvent";
-            this.btnAddEvent.Size = new System.Drawing.Size(132, 65);
+            this.btnAddEvent.Size = new System.Drawing.Size(141, 65);
             this.btnAddEvent.TabIndex = 8;
             this.btnAddEvent.Text = "Add Event";
             this.btnAddEvent.UseVisualStyleBackColor = false;
@@ -941,7 +945,7 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblLogin.Location = new System.Drawing.Point(132, 11);
+            this.lblLogin.Location = new System.Drawing.Point(147, 0);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(171, 16);
             this.lblLogin.TabIndex = 7;
@@ -955,9 +959,9 @@
             this.btnViewProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnViewProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewProfile.ForeColor = System.Drawing.Color.MintCream;
-            this.btnViewProfile.Location = new System.Drawing.Point(3, 61);
+            this.btnViewProfile.Location = new System.Drawing.Point(0, 64);
             this.btnViewProfile.Name = "btnViewProfile";
-            this.btnViewProfile.Size = new System.Drawing.Size(132, 65);
+            this.btnViewProfile.Size = new System.Drawing.Size(141, 65);
             this.btnViewProfile.TabIndex = 1;
             this.btnViewProfile.Text = "View Profile";
             this.btnViewProfile.UseVisualStyleBackColor = false;
@@ -1017,6 +1021,26 @@
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(141, 69);
+            this.panel1.TabIndex = 13;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(29, 11);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 33);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Menu";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1050,6 +1074,8 @@
             this.grpBoxFirstClass.PerformLayout();
             this.panelDelete.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDelete)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1134,6 +1160,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Location;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label11;
 
 
     }

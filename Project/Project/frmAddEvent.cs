@@ -218,7 +218,6 @@ namespace Project
         private void txtBxEventName_Click(object sender, EventArgs e)
         {
             txtBxEventName.ForeColor = Color.Black;
-            lblSubject.ForeColor = Color.MintCream;
             txtBxEventName.Text = "";
         }
        
@@ -451,8 +450,23 @@ namespace Project
         private void txtBxLocationAdd_Click_1(object sender, EventArgs e)
         {
             txtBxLocationAdd.ForeColor = Color.Black;
-            lblLocationAdd.ForeColor = Color.MintCream;
+     
             txtBxLocationAdd.Text = "";
+        }
+
+        private void lblLocationAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSubject_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBxEventName_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         
