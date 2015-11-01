@@ -193,6 +193,7 @@ namespace Project
         {
             panelEventView.Show();
             pnl2.Hide();
+            panelDelete.Hide();
         }
 
         private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
@@ -425,6 +426,177 @@ namespace Project
                 }
             }
             return "Nothing Scheduled";
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            pnl2.Hide();
+            panelEventView.Hide();
+            panelDelete.Show();
+            reinitializeDataGridDelete();
+          
+            
+            
+            
+        }
+
+        private void btnDeleteEvent_Click(object sender, EventArgs e)
+        {
+           
+
+            if (dataGridDelete.Rows.Count < 2)
+            {
+                MessageBox.Show("No Data Available to Delete!");
+            }
+            else
+            {
+
+                //Find index of currently selected object in myCalendar.
+                string subject = dataGridDelete.Rows[dataGridDelete.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                string time = dataGridDelete.Rows[dataGridDelete.CurrentCell.RowIndex].Cells[2].Value.ToString();
+                DateTime eventDate = Convert.ToDateTime(dataGridDelete.Rows[dataGridDelete.CurrentCell.RowIndex].Cells[3].Value);
+                clearEvent(eventDate, subject, time);
+                reinitializeDataGridDelete();
+                dataGridDelete.Refresh();
+            }
+            
+            
+        }
+
+       
+        private void clearEvent(DateTime even,string sub,string time)
+        {
+            for(int index = 0; index < myCalendar.Count;index++)
+            {
+                if(even.Date == myCalendar[index].getEvent().Date)
+                {
+                    if (time == "07:30" && myCalendar[index].TimeSlot1 == sub)
+                    {
+                        myCalendar[index].TimeSlot1 = "";
+                        myCalendar[index].LocationEvent1 = "";
+                    }
+                    else if (time == "08:30" && myCalendar[index].TimeSlot2 == sub)
+                    {
+                        myCalendar[index].TimeSlot2 = "";
+                        myCalendar[index].LocationEvent2 = "";
+                    }
+                    else if (time == "09:30" && myCalendar[index].TimeSlot3 == sub)
+                    {
+                        myCalendar[index].TimeSlot3 = "";
+                        myCalendar[index].LocationEvent3 = "";
+                    }
+                    else if (time == "10:30" && myCalendar[index].TimeSlot4 == sub)
+                    {
+                        myCalendar[index].TimeSlot4 = "";
+                        myCalendar[index].LocationEvent4 = "";
+                    }
+                    else if (time == "11:30" && myCalendar[index].TimeSlot5 == sub)
+                    {
+                        myCalendar[index].TimeSlot5 = "";
+                        myCalendar[index].LocationEvent5 = "";
+                    }
+                    else if (time == "12:30" && myCalendar[index].TimeSlot6 == sub)
+                    {
+                        myCalendar[index].TimeSlot6 = "";
+                        myCalendar[index].LocationEvent6 = "";
+                    }
+                    else if (time == "13:30" && myCalendar[index].TimeSlot7 == sub)
+                    {
+                        myCalendar[index].TimeSlot7 = "";
+                        myCalendar[index].LocationEvent7 = "";
+                    }
+                    else if (time == "14:30" && myCalendar[index].TimeSlot8 == sub)
+                    {
+                        myCalendar[index].TimeSlot8 = "";
+                        myCalendar[index].LocationEvent8 = "";
+                    }
+                    else if (time == "15:30" && myCalendar[index].TimeSlot9 == sub)
+                    {
+                        myCalendar[index].TimeSlot9 = "";
+                        myCalendar[index].LocationEvent9 = "";
+                    }
+                    else if (time == "16:30" && myCalendar[index].TimeSlot10 == sub)
+                    {
+                        myCalendar[index].TimeSlot10 = "";
+                        myCalendar[index].LocationEvent10 = "";
+                    }
+                    else if (time == "17:30" && myCalendar[index].TimeSlot11 == sub)
+                    {
+                        myCalendar[index].TimeSlot11 = "";
+                        myCalendar[index].LocationEvent11 = "";
+                    }
+
+                }
+            }
+            
+        }
+        private void reinitializeDataGridDelete()
+        {
+            //Clear datagrid.
+            do
+            {
+                foreach (DataGridViewRow row in dataGridDelete.Rows)
+                {
+                    try
+                    {
+                        dataGridDelete.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (dataGridDelete.Rows.Count > 1);
+
+            //Initialise datagrid with objects.
+            for (int i = 0; i < myCalendar.Count; i++)
+            {
+                if (myCalendar[i].getUser() == currentUser.Username)
+                {
+                    if (myCalendar[i].TimeSlot1 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot1, myCalendar[i].LocationEvent1, "07:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot2 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot2, myCalendar[i].LocationEvent2, "08:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot3 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot3, myCalendar[i].LocationEvent3, "09:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot4 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot4, myCalendar[i].LocationEvent4, "10:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot5 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot5, myCalendar[i].LocationEvent5, "11:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot6 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot6, myCalendar[i].LocationEvent6, "12:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot7 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot7, myCalendar[i].LocationEvent7, "13:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot8 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot8, myCalendar[i].LocationEvent8, "14:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot9 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot9, myCalendar[i].LocationEvent9, "15:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot10 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot10, myCalendar[i].LocationEvent10, "16:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                    if (myCalendar[i].TimeSlot11 != "")
+                    {
+                        dataGridDelete.Rows.Add(myCalendar[i].TimeSlot11, myCalendar[i].LocationEvent11, "17:30", myCalendar[i].getEvent().ToString("D"));
+                    }
+                }
+            }
 
         }
     }

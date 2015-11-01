@@ -96,11 +96,18 @@
             this.lnklblLogout = new System.Windows.Forms.LinkLabel();
             this.btnUpdateUserData = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnAddEvent = new System.Windows.Forms.Button();
             this.lblLogin = new System.Windows.Forms.Label();
             this.paneProfile = new System.Windows.Forms.Panel();
             this.btnViewProfile = new System.Windows.Forms.Button();
+            this.panelDelete = new System.Windows.Forms.Panel();
+            this.btnDeleteEvent = new System.Windows.Forms.Button();
+            this.dataGridDelete = new System.Windows.Forms.DataGridView();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMain.SuspendLayout();
             this.panelEventView.SuspendLayout();
             this.pnl2.SuspendLayout();
@@ -114,6 +121,8 @@
             this.grpBoxLastClass.SuspendLayout();
             this.panel5.SuspendLayout();
             this.grpBoxFirstClass.SuspendLayout();
+            this.panelDelete.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
@@ -124,11 +133,12 @@
             this.panelMain.Controls.Add(this.lnklblLogout);
             this.panelMain.Controls.Add(this.btnUpdateUserData);
             this.panelMain.Controls.Add(this.button4);
-            this.panelMain.Controls.Add(this.button3);
+            this.panelMain.Controls.Add(this.btnDelete);
             this.panelMain.Controls.Add(this.btnAddEvent);
             this.panelMain.Controls.Add(this.lblLogin);
             this.panelMain.Controls.Add(this.paneProfile);
             this.panelMain.Controls.Add(this.btnViewProfile);
+            this.panelMain.Controls.Add(this.panelDelete);
             this.panelMain.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
@@ -913,18 +923,20 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.Teal;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(3, 272);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 65);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDelete.AutoSize = true;
+            this.btnDelete.BackColor = System.Drawing.Color.Teal;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.ForeColor = System.Drawing.Color.MintCream;
+            this.btnDelete.Location = new System.Drawing.Point(3, 272);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(132, 65);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.Text = "Delete Event";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAddEvent
             // 
@@ -977,6 +989,59 @@
             this.btnViewProfile.UseVisualStyleBackColor = false;
             this.btnViewProfile.Click += new System.EventHandler(this.btnViewProfile_Click);
             // 
+            // panelDelete
+            // 
+            this.panelDelete.BackColor = System.Drawing.Color.White;
+            this.panelDelete.Controls.Add(this.btnDeleteEvent);
+            this.panelDelete.Controls.Add(this.dataGridDelete);
+            this.panelDelete.Location = new System.Drawing.Point(141, 61);
+            this.panelDelete.Name = "panelDelete";
+            this.panelDelete.Size = new System.Drawing.Size(860, 493);
+            this.panelDelete.TabIndex = 2;
+            // 
+            // btnDeleteEvent
+            // 
+            this.btnDeleteEvent.Location = new System.Drawing.Point(21, 424);
+            this.btnDeleteEvent.Name = "btnDeleteEvent";
+            this.btnDeleteEvent.Size = new System.Drawing.Size(141, 23);
+            this.btnDeleteEvent.TabIndex = 1;
+            this.btnDeleteEvent.Text = "Delete Event";
+            this.btnDeleteEvent.UseVisualStyleBackColor = true;
+            this.btnDeleteEvent.Click += new System.EventHandler(this.btnDeleteEvent_Click);
+            // 
+            // dataGridDelete
+            // 
+            this.dataGridDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDelete.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Subject,
+            this.Location,
+            this.Time,
+            this.Date});
+            this.dataGridDelete.Location = new System.Drawing.Point(191, 20);
+            this.dataGridDelete.Name = "dataGridDelete";
+            this.dataGridDelete.Size = new System.Drawing.Size(654, 456);
+            this.dataGridDelete.TabIndex = 0;
+            // 
+            // Subject
+            // 
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            // 
+            // Location
+            // 
+            this.Location.HeaderText = "Location";
+            this.Location.Name = "Location";
+            // 
+            // Time
+            // 
+            this.Time.HeaderText = "Time";
+            this.Time.Name = "Time";
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1008,6 +1073,8 @@
             this.panel5.ResumeLayout(false);
             this.grpBoxFirstClass.ResumeLayout(false);
             this.grpBoxFirstClass.PerformLayout();
+            this.panelDelete.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDelete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1017,7 +1084,7 @@
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnUpdateUserData;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAddEvent;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Panel paneProfile;
@@ -1087,6 +1154,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelDelete;
+        private System.Windows.Forms.Button btnDeleteEvent;
+        private System.Windows.Forms.DataGridView dataGridDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
 
 
     }

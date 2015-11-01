@@ -67,6 +67,7 @@ namespace Project
                 DateTime current = monthCalendarAddEvent.SelectionStart;
                 createEvent(current);
                 MessageBox.Show("Successfully Created Event!");
+                this.Close();
                
                 
             }
@@ -443,7 +444,9 @@ namespace Project
                 
             }
             MessageBox.Show("Successfully Added Events for " + dropDownDays.SelectedItem.ToString() + " between :\n\n" + monthCalendarAddEvent.SelectionStart.ToString("D") + " to " + monthCalendarAddEvent.SelectionEnd.ToString("D") + ".");
+            this.Close();
         }
+
 
         private void txtBxLocationAdd_Click_1(object sender, EventArgs e)
         {
