@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panelEventView = new System.Windows.Forms.Panel();
             this.pnl2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panelEventView = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -95,11 +95,9 @@
             this.lbl1stSubject = new System.Windows.Forms.Label();
             this.lnklblLogout = new System.Windows.Forms.LinkLabel();
             this.btnUpdateUserData = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAddEvent = new System.Windows.Forms.Button();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.paneProfile = new System.Windows.Forms.Panel();
             this.btnViewProfile = new System.Windows.Forms.Button();
             this.panelDelete = new System.Windows.Forms.Panel();
             this.btnDeleteEvent = new System.Windows.Forms.Button();
@@ -109,12 +107,12 @@
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMain.SuspendLayout();
-            this.panelEventView.SuspendLayout();
             this.pnl2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelEventView.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -132,11 +130,9 @@
             this.panelMain.Controls.Add(this.panelEventView);
             this.panelMain.Controls.Add(this.lnklblLogout);
             this.panelMain.Controls.Add(this.btnUpdateUserData);
-            this.panelMain.Controls.Add(this.button4);
             this.panelMain.Controls.Add(this.btnDelete);
             this.panelMain.Controls.Add(this.btnAddEvent);
             this.panelMain.Controls.Add(this.lblLogin);
-            this.panelMain.Controls.Add(this.paneProfile);
             this.panelMain.Controls.Add(this.btnViewProfile);
             this.panelMain.Controls.Add(this.panelDelete);
             this.panelMain.ImeMode = System.Windows.Forms.ImeMode.Alpha;
@@ -145,18 +141,6 @@
             this.panelMain.Size = new System.Drawing.Size(1008, 565);
             this.panelMain.TabIndex = 2;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
-            // 
-            // panelEventView
-            // 
-            this.panelEventView.BackColor = System.Drawing.Color.GhostWhite;
-            this.panelEventView.Controls.Add(this.groupBox1);
-            this.panelEventView.Controls.Add(this.monthCalendar);
-            this.panelEventView.Controls.Add(this.panel4);
-            this.panelEventView.Controls.Add(this.panel5);
-            this.panelEventView.Location = new System.Drawing.Point(141, 61);
-            this.panelEventView.Name = "panelEventView";
-            this.panelEventView.Size = new System.Drawing.Size(860, 493);
-            this.panelEventView.TabIndex = 0;
             // 
             // pnl2
             // 
@@ -390,6 +374,18 @@
             this.label3.Size = new System.Drawing.Size(68, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "Username :";
+            // 
+            // panelEventView
+            // 
+            this.panelEventView.BackColor = System.Drawing.Color.GhostWhite;
+            this.panelEventView.Controls.Add(this.groupBox1);
+            this.panelEventView.Controls.Add(this.monthCalendar);
+            this.panelEventView.Controls.Add(this.panel4);
+            this.panelEventView.Controls.Add(this.panel5);
+            this.panelEventView.Location = new System.Drawing.Point(141, 61);
+            this.panelEventView.Name = "panelEventView";
+            this.panelEventView.Size = new System.Drawing.Size(860, 493);
+            this.panelEventView.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -902,26 +898,13 @@
             this.btnUpdateUserData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnUpdateUserData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdateUserData.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateUserData.Location = new System.Drawing.Point(3, 414);
+            this.btnUpdateUserData.Location = new System.Drawing.Point(3, 270);
             this.btnUpdateUserData.Name = "btnUpdateUserData";
             this.btnUpdateUserData.Size = new System.Drawing.Size(132, 65);
             this.btnUpdateUserData.TabIndex = 11;
             this.btnUpdateUserData.Text = "User Settings";
             this.btnUpdateUserData.UseVisualStyleBackColor = false;
             this.btnUpdateUserData.Click += new System.EventHandler(this.btnUpdateUserData_Click);
-            // 
-            // button4
-            // 
-            this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.Color.Teal;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(3, 343);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 65);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
@@ -930,7 +913,7 @@
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.ForeColor = System.Drawing.Color.MintCream;
-            this.btnDelete.Location = new System.Drawing.Point(3, 272);
+            this.btnDelete.Location = new System.Drawing.Point(3, 199);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(132, 65);
             this.btnDelete.TabIndex = 9;
@@ -945,7 +928,7 @@
             this.btnAddEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAddEvent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddEvent.ForeColor = System.Drawing.Color.MintCream;
-            this.btnAddEvent.Location = new System.Drawing.Point(3, 201);
+            this.btnAddEvent.Location = new System.Drawing.Point(3, 130);
             this.btnAddEvent.Name = "btnAddEvent";
             this.btnAddEvent.Size = new System.Drawing.Size(132, 65);
             this.btnAddEvent.TabIndex = 8;
@@ -965,15 +948,6 @@
             this.lblLogin.Text = "Logged in as Peter Griffin";
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
-            // paneProfile
-            // 
-            this.paneProfile.BackColor = System.Drawing.Color.FloralWhite;
-            this.paneProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.paneProfile.Location = new System.Drawing.Point(3, 3);
-            this.paneProfile.Name = "paneProfile";
-            this.paneProfile.Size = new System.Drawing.Size(126, 121);
-            this.paneProfile.TabIndex = 6;
-            // 
             // btnViewProfile
             // 
             this.btnViewProfile.AutoSize = true;
@@ -981,7 +955,7 @@
             this.btnViewProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnViewProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewProfile.ForeColor = System.Drawing.Color.MintCream;
-            this.btnViewProfile.Location = new System.Drawing.Point(3, 130);
+            this.btnViewProfile.Location = new System.Drawing.Point(3, 61);
             this.btnViewProfile.Name = "btnViewProfile";
             this.btnViewProfile.Size = new System.Drawing.Size(132, 65);
             this.btnViewProfile.TabIndex = 1;
@@ -1011,6 +985,7 @@
             // 
             // dataGridDelete
             // 
+            this.dataGridDelete.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDelete.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Subject,
@@ -1054,7 +1029,6 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
-            this.panelEventView.ResumeLayout(false);
             this.pnl2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -1064,6 +1038,7 @@
             this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelEventView.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1083,11 +1058,9 @@
 
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnUpdateUserData;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAddEvent;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.Panel paneProfile;
         private System.Windows.Forms.Button btnViewProfile;
         private System.Windows.Forms.Panel panelEventView;
         private System.Windows.Forms.MonthCalendar monthCalendar;
